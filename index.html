@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b1020">
+<title>מונדיאל 2026 — כלי תומך החלטה</title>
+<style>
+:root{
+  --bg:#0b1020; --bg2:#121a31; --card:#161f3a; --card2:#1d294a; --line:#26335c;
+  --txt:#eef2ff; --muted:#9fb0d6; --acc:#37d39a; --acc2:#4aa3ff; --gold:#ffcb45;
+  --red:#ff5d6c; --blue:#4aa3ff; --gray:#7e8cb3; --result:#37d39a; --pred:#4aa3ff; --ai:#8b97bd;
+  --r:14px; --sh:0 6px 22px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:linear-gradient(180deg,#0b1020,#0d1428 60%,#0b1020);color:var(--txt);
+  font-family:"Segoe UI",Rubik,Arial,Helvetica,sans-serif;-webkit-text-size-adjust:100%}
+a{color:var(--acc2)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 12px 90px}
+header.top{position:sticky;top:0;z-index:30;background:rgba(10,15,32,.92);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);padding:10px 12px}
+.top-row{display:flex;align-items:center;gap:10px;max-width:1100px;margin:0 auto}
+.brand{font-weight:800;font-size:18px;letter-spacing:.3px;display:flex;align-items:center;gap:8px}
+.brand .cup{font-size:22px}
+.spacer{flex:1}
+.btn{background:var(--card2);border:1px solid var(--line);color:var(--txt);border-radius:10px;
+  padding:7px 10px;font-size:13px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.btn:hover{border-color:var(--acc2)}
+.btn.acc{background:var(--acc);color:#06281d;border-color:transparent;font-weight:700}
+.btn.sm{padding:4px 8px;font-size:12px}
+.updated{font-size:11px;color:var(--muted);margin-top:4px;text-align:center}
+nav.tabs{display:flex;gap:6px;margin:12px 0;position:sticky;top:54px;z-index:20;
+  background:rgba(10,15,32,.0);flex-wrap:wrap}
+nav.tabs button{flex:1;min-width:90px;background:var(--card);border:1px solid var(--line);color:var(--muted);
+  padding:10px;border-radius:12px;font-size:14px;font-weight:600;cursor:pointer}
+nav.tabs button.on{background:linear-gradient(180deg,var(--card2),var(--card));color:var(--txt);border-color:var(--acc2)}
+.section-title{font-size:16px;font-weight:800;margin:18px 4px 10px;display:flex;align-items:center;gap:8px}
+.grid{display:grid;gap:12px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+@media(max-width:760px){.g2,.g3{grid-template-columns:1fr}}
+.card{background:linear-gradient(180deg,var(--card),var(--bg2));border:1px solid var(--line);border-radius:var(--r);
+  box-shadow:var(--sh);overflow:hidden}
+.card .hd{padding:11px 13px;border-bottom:1px solid var(--line);font-weight:700;display:flex;align-items:center;gap:8px}
+.card .bd{padding:11px 13px}
+.pill{font-size:11px;padding:2px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.pill.result{background:rgba(55,211,154,.15);color:var(--result);border-color:transparent}
+.pill.pred{background:rgba(74,163,255,.15);color:var(--pred);border-color:transparent}
+.pill.ai{background:rgba(139,151,189,.15);color:var(--ai);border-color:transparent}
+.pill.gold{background:rgba(255,203,69,.15);color:var(--gold);border-color:transparent}
+/* standings table */
+table.stand{width:100%;border-collapse:collapse;font-size:13px}
+table.stand th,table.stand td{padding:7px 6px;text-align:center;border-bottom:1px solid var(--line)}
+table.stand th{color:var(--muted);font-weight:600;font-size:11px}
+table.stand td.team{text-align:right;font-weight:600;white-space:nowrap}
+table.stand tr.adv{background:rgba(55,211,154,.07)}
+table.stand tr.adv3{background:rgba(255,203,69,.06)}
+.flag{font-size:16px;margin-left:4px}
+.qb{display:inline-block;width:7px;height:7px;border-radius:50%;margin-left:5px}
+.qb.q1{background:var(--acc)}.qb.q2{background:var(--acc2)}.qb.q3{background:var(--gold)}.qb.q4{background:#3a4570}
+/* match row */
+.match{display:flex;align-items:center;gap:8px;padding:9px 6px;border-bottom:1px solid var(--line);cursor:pointer}
+.match:last-child{border-bottom:0}
+.match:hover{background:rgba(74,163,255,.05)}
+.m-teams{flex:1;min-width:0}
+.m-line{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.m-team{display:flex;align-items:center;gap:6px;min-width:0}
+.m-team .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.m-score{font-weight:800;font-variant-numeric:tabular-nums;min-width:42px;text-align:center}
+.m-meta{font-size:11px;color:var(--muted);margin-top:3px;display:flex;gap:8px;flex-wrap:wrap}
+.m-side{display:flex;flex-direction:column;align-items:center;gap:3px}
+.dot{width:8px;height:8px;border-radius:50%}
+.dot.result{background:var(--result)}.dot.pred{background:var(--pred)}.dot.ai{background:var(--ai)}.dot.none{background:#444c6e}
+.ai-rec{font-size:12px;color:var(--muted);margin-top:6px;padding:7px 9px;background:rgba(139,151,189,.08);
+  border-right:3px solid var(--ai);border-radius:8px}
+.ai-rec b{color:var(--txt)}
+/* modal */
+.modal-bg{position:fixed;inset:0;background:rgba(4,8,20,.7);z-index:50;display:none;align-items:flex-start;justify-content:center;overflow:auto;padding:20px 10px}
+.modal-bg.on{display:flex}
+.modal{width:100%;max-width:620px;background:linear-gradient(180deg,var(--card2),var(--bg2));border:1px solid var(--line);
+  border-radius:16px;box-shadow:var(--sh);overflow:hidden}
+.modal .mhd{padding:13px 15px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px}
+.modal .mbd{padding:14px 15px}
+.close{margin-inline-start:auto;background:none;border:0;color:var(--muted);font-size:22px;cursor:pointer;line-height:1}
+.score-edit{display:flex;align-items:center;justify-content:center;gap:14px;margin:10px 0}
+.score-edit .te{display:flex;flex-direction:column;align-items:center;gap:6px;width:40%}
+.score-edit input[type=number]{width:62px;height:48px;font-size:24px;text-align:center;border-radius:10px;
+  border:1px solid var(--line);background:var(--bg);color:var(--txt);font-weight:800}
+.seg{display:flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:6px 0}
+.seg button{flex:1;background:var(--card);color:var(--muted);border:0;padding:8px;font-size:12px;cursor:pointer}
+.seg button.on{background:var(--acc2);color:#04223f;font-weight:700}
+.modelrow{font-size:12px;border-top:1px solid var(--line);padding:8px 0}
+.modelrow .mn{font-weight:700;color:var(--acc2)}
+.events{margin-top:10px}
+.evt{display:flex;gap:6px;align-items:center;font-size:12px;padding:4px 0;border-bottom:1px dashed var(--line)}
+.evt input,.evt select{background:var(--bg);border:1px solid var(--line);color:var(--txt);border-radius:7px;padding:5px;font-size:12px}
+.evt .min{width:52px}.evt .pl{flex:1;min-width:60px}
+.tiny{font-size:11px;color:var(--muted)}
+.note{font-size:12px;color:var(--muted);background:rgba(74,163,255,.06);border-radius:8px;padding:8px;margin-top:8px}
+/* bracket */
+.kround{margin-bottom:8px}
+.ko-card{display:flex;align-items:stretch;gap:8px;background:linear-gradient(180deg,var(--card),var(--bg2));
+  border:1px solid var(--line);border-radius:12px;padding:8px 10px;margin-bottom:8px;cursor:pointer}
+.ko-card.path{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset}
+.ko-card .kteams{flex:1;min-width:0}
+.ko-team{display:flex;align-items:center;gap:6px;padding:3px 0}
+.ko-team .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}
+.ko-team.win{color:var(--acc);font-weight:700}
+.ko-num{font-size:10px;color:var(--muted);min-width:34px;text-align:center;display:flex;flex-direction:column;justify-content:center;gap:2px}
+select.teamsel,select.simple{background:var(--card);border:1px solid var(--line);color:var(--txt);border-radius:10px;padding:9px;font-size:14px;width:100%}
+.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:11px;color:var(--muted);margin:6px 2px}
+.legend span{display:inline-flex;align-items:center;gap:5px}
+.hero{display:grid;gap:10px}
+.hero .big{font-size:15px}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.chip{background:var(--card2);border:1px solid var(--line);border-radius:999px;padding:4px 10px;font-size:12px}
+.modelpick{display:flex;gap:6px;flex-wrap:wrap;font-size:12px;margin-top:4px}
+.kv{display:flex;justify-content:space-between;font-size:13px;padding:3px 0;border-bottom:1px solid var(--line)}
+details.an{margin-top:8px}details.an summary{cursor:pointer;color:var(--acc2);font-size:13px}
+.badge{font-size:10px;padding:1px 6px;border-radius:6px;background:var(--card);border:1px solid var(--line);color:var(--muted)}
+.toast{position:fixed;bottom:16px;right:16px;background:var(--acc);color:#06281d;padding:10px 14px;border-radius:10px;
+  font-weight:700;z-index:80;box-shadow:var(--sh);opacity:0;transform:translateY(10px);transition:.25s}
+.toast.on{opacity:1;transform:none}
+.loading{padding:40px;text-align:center;color:var(--muted)}
+hr.sep{border:0;border-top:1px solid var(--line);margin:10px 0}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-row">
+    <div class="brand"><span class="cup">🏆</span> מונדיאל 2026</div>
+    <div class="spacer"></div>
+    <button class="btn sm" id="btnRefresh" title="רענון נתונים מהשרת">🔄 רענון</button>
+    <button class="btn sm" id="btnMenu">⚙️</button>
+  </div>
+  <div class="updated" id="updated"></div>
+</header>
+
+<div class="wrap">
+  <nav class="tabs" id="tabs">
+    <button data-v="dash" class="on">לוח בקרה</button>
+    <button data-v="groups">בתים</button>
+    <button data-v="knockout">נוקאאוט</button>
+  </nav>
+  <div id="view"><div class="loading">טוען נתונים…</div></div>
+</div>
+
+<!-- settings menu -->
+<div class="modal-bg" id="menuBg">
+  <div class="modal" style="max-width:460px">
+    <div class="mhd"><b>הגדרות וגיבוי</b><button class="close" data-close>×</button></div>
+    <div class="mbd">
+      <div class="seg" id="seedSeg">
+        <button data-seed="1">מלא תחזיות AI כברירת מחדל</button>
+        <button data-seed="0">התחל ריק</button>
+      </div>
+      <p class="tiny">כשמופעל, משחקים ללא תוצאה/ניחוש ממולאים אוטומטית לפי קונצנזוס מודלי ה-AI (מסומן באפור). זה מזין את הטבלאות ואת עץ הנוקאאוט.</p>
+      <hr class="sep">
+      <div class="grid g2">
+        <button class="btn" id="btnExport">⬇️ ייצוא נתונים</button>
+        <button class="btn" id="btnImport">⬆️ ייבוא נתונים</button>
+      </div>
+      <input type="file" id="fileImport" accept="application/json" style="display:none">
+      <p class="tiny">הנתונים שלך (ניחושים ותוצאות שהזנת) נשמרים בדפדפן הזה. ייצוא/ייבוא מאפשרים מעבר בין מכשירים.</p>
+      <hr class="sep">
+      <button class="btn" id="btnReset" style="color:var(--red)">🗑️ איפוס כל הניחושים/תוצאות שלי</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-bg" id="matchBg"><div class="modal" id="matchModal"></div></div>
+<div class="toast" id="toast"></div>
+
+<script>
+const HE_MONTHS=['ינו','פבר','מרץ','אפר','מאי','יוני','יולי','אוג','ספט','אוק','נוב','דצמ'];
+const STAGE_HE={group:'בית',R32:'שלב 32',R16:'שמינית גמר',QF:'רבע גמר',SF:'חצי גמר','3RD':'משחק מקום 3','FINAL':'גמר'};
+const GROUP_HE={A:'א',B:'ב',C:'ג',D:'ד',E:'ה',F:'ו',G:'ז',H:'ח',I:'ט',J:'י',K:'י״א',L:'י״ב'};
+let DATA=null, STORE=null, CURV='dash', PATH_TEAM='';
+
+/* ---------- storage ---------- */
+function loadStore(){
+  try{STORE=JSON.parse(localStorage.getItem('mundial26')||'{}')}catch(e){STORE={}}
+  STORE.results=STORE.results||{}; STORE.predictions=STORE.predictions||{};
+  STORE.settings=STORE.settings||{seedFromAI:true};
+  if(STORE.settings.seedFromAI===undefined)STORE.settings.seedFromAI=true;
+}
+function saveStore(){localStorage.setItem('mundial26',JSON.stringify(STORE))}
+function toast(t){const e=document.getElementById('toast');e.textContent=t;e.classList.add('on');setTimeout(()=>e.classList.remove('on'),1800)}
+
+/* ---------- utils ---------- */
+function teamHe(en){const t=DATA.teams[en];return t?t.he:en}
+function teamFlag(en){const t=DATA.teams[en];return t?t.flag:'🏳️'}
+function fmtDate(iso){const d=new Date(iso+'T00:00:00');return d.getDate()+' '+HE_MONTHS[d.getMonth()]}
+function parseScore(s){
+  if(!s)return null; s=String(s);
+  const m=s.match(/(\d+)\s*[:\-–]\s*(\d+)/);
+  if(!m)return null; return [parseInt(m[1]),parseInt(m[2])];
+}
+function matchByNum(n){return DATA._byNum[n]}
+
+/* ---------- team strength (for KO derived AI rec) ---------- */
+let STRENGTH={};
+function buildStrength(){
+  STRENGTH={};
+  const he2en=DATA.name_maps.he2en||{};
+  const alias={'ארה"ב':'United States','בוסניה':'Bosnia and Herzegovina','סעודיה':'Saudi Arabia','קונגו DR':'DR Congo','קטר':'Qatar','תוניסיה':'Tunisia'};
+  function toEn(he){if(!he)return null;he=he.trim();return he2en[he]||he2en[alias[he]]||(DATA.teams[he]?he:null)}
+  for(const en in DATA.teams)STRENGTH[en]=0;
+  const ov=(DATA.overall&&DATA.overall.models)||{};
+  const w={champion:100,runner_up:70,finalists:70,semifinalists:55,quarterfinalists:38,dark_horses:18,surprises:12};
+  for(const mdl in ov){const o=ov[mdl];
+    [['champion',o.champion],['runner_up',o.runner_up]].forEach(([k,v])=>{const e=toEn(v);if(e&&STRENGTH[e]!=null)STRENGTH[e]+=w[k]});
+    ['finalists','semifinalists','quarterfinalists','dark_horses','surprises'].forEach(k=>{(o[k]||[]).forEach(v=>{const e=toEn(v);if(e&&STRENGTH[e]!=null)STRENGTH[e]+=w[k]||0})});
+  }
+  // group consensus rank
+  for(const en in DATA.teams){const a=DATA.teams[en].analysis;
+    const r=a&&a.consensus&&a.consensus.projected_rank;
+    if(r){STRENGTH[en]+=({1:34,2:22,3:11,4:2}[r]||0)}
+  }
+  // tiny tiebreaker by name for determinism
+}
+function stronger(a,b){
+  const sa=STRENGTH[a]||0, sb=STRENGTH[b]||0;
+  if(sa!==sb)return sa>sb?a:b;
+  return a<b?a:b;
+}
+
+/* ---------- effective outcomes ---------- */
+// returns {h,a,kind} for a match given resolved participants; kind: result|pred|ai|null
+function aiSeed(match){
+  if(match.stage==='group'){
+    const c=match.ai&&match.ai.consensus;
+    if(!c)return null;
+    let sc=parseScore(c.score);
+    const w=(match.ai.consensus_winner_en)||null;
+    if(!sc){
+      if(w==='DRAW')sc=[1,1];
+      else if(w){ // winner known, default 1-0 to the winner
+        if(w===match.home.name_en)sc=[1,0]; else if(w===match.away.name_en)sc=[0,1]; else sc=null;
+      }
+    }
+    if(sc)return {h:sc[0],a:sc[1],kind:'ai'};
+    return null;
+  } else {
+    // knockout: pick stronger resolved team
+    const tt=resolveTeams(match);
+    if(tt.home&&tt.away){const w=stronger(tt.home,tt.away);
+      return w===tt.home?{h:1,a:0,kind:'ai'}:{h:0,a:1,kind:'ai'};}
+    return null;
+  }
+}
+function outcome(match){
+  const r=STORE.results[match.num];
+  if(r&&r.h!==''&&r.a!==''&&r.h!=null&&r.a!=null)return {h:+r.h,a:+r.a,kind:'result',pso:r.pso};
+  const p=STORE.predictions[match.num];
+  if(p&&p.h!==''&&p.a!==''&&p.h!=null&&p.a!=null)return {h:+p.h,a:+p.a,kind:'pred',pso:p.pso};
+  if(STORE.settings.seedFromAI){const s=aiSeed(match);if(s)return s;}
+  return null;
+}
+
+/* ---------- group standings ---------- */
+function groupTeams(g){return Object.values(DATA.teams).filter(t=>t.group===g).map(t=>t.en)}
+function groupMatches(g){return DATA.matches.filter(m=>m.stage==='group'&&m.group===g)}
+function computeStandings(g){
+  const teams=groupTeams(g);
+  const st={};teams.forEach(e=>st[e]={en:e,P:0,W:0,D:0,L:0,GF:0,GA:0,GD:0,Pts:0,played:0});
+  const ms=groupMatches(g);
+  ms.forEach(m=>{const o=outcome(m);if(!o)return;
+    const h=m.home.name_en,a=m.away.name_en;if(!st[h]||!st[a])return;
+    st[h].GF+=o.h;st[h].GA+=o.a;st[a].GF+=o.a;st[a].GA+=o.h;st[h].played++;st[a].played++;
+    if(o.h>o.a){st[h].W++;st[a].L++;st[h].Pts+=3}
+    else if(o.h<o.a){st[a].W++;st[h].L++;st[a].Pts+=3}
+    else{st[h].D++;st[a].D++;st[h].Pts++;st[a].Pts++}
+  });
+  teams.forEach(e=>{st[e].GD=st[e].GF-st[e].GA;st[e].P=st[e].played});
+  // sort: pts,GD,GF, then head-to-head among tied, then name
+  let arr=teams.map(e=>st[e]);
+  arr.sort((x,y)=>cmpTeams(x,y,ms,st));
+  return arr;
+}
+function cmpTeams(x,y,ms,st){
+  if(y.Pts!==x.Pts)return y.Pts-x.Pts;
+  if(y.GD!==x.GD)return y.GD-x.GD;
+  if(y.GF!==x.GF)return y.GF-x.GF;
+  // head-to-head between the two
+  const h2h=h2hStats([x.en,y.en],ms);
+  if(h2h[y.en].Pts!==h2h[x.en].Pts)return h2h[y.en].Pts-h2h[x.en].Pts;
+  if(h2h[y.en].GD!==h2h[x.en].GD)return h2h[y.en].GD-h2h[x.en].GD;
+  if(h2h[y.en].GF!==h2h[x.en].GF)return h2h[y.en].GF-h2h[x.en].GF;
+  return x.en<y.en?-1:1;
+}
+function h2hStats(ens,ms){
+  const s={};ens.forEach(e=>s[e]={Pts:0,GF:0,GA:0,GD:0});
+  ms.forEach(m=>{const h=m.home.name_en,a=m.away.name_en;
+    if(ens.includes(h)&&ens.includes(a)){const o=outcome(m);if(!o)return;
+      s[h].GF+=o.h;s[h].GA+=o.a;s[a].GF+=o.a;s[a].GA+=o.h;
+      if(o.h>o.a)s[h].Pts+=3;else if(o.h<o.a)s[a].Pts+=3;else{s[h].Pts++;s[a].Pts++}}});
+  ens.forEach(e=>s[e].GD=s[e].GF-s[e].GA);return s;
+}
+
+/* ---------- third place ranking + assignment ---------- */
+function thirdsRanking(){
+  const arr=[];
+  for(const g of 'ABCDEFGHIJKL'){const s=computeStandings(g);if(s[2])arr.push({...s[2],group:g})}
+  arr.sort((x,y)=> y.Pts-x.Pts || y.GD-x.GD || y.GF-x.GF || (x.group<y.group?-1:1));
+  return arr;
+}
+// R32 third-slots and their allowed group-pools (match num -> pool)
+const THIRD_SLOTS=[]; // filled after data load from fixtures
+function buildThirdSlots(){
+  THIRD_SLOTS.length=0;
+  DATA.matches.forEach(m=>{
+    ['home','away'].forEach(side=>{const s=m[side];if(s.type==='third')THIRD_SLOTS.push({num:m.num,side,pool:s.pool})});
+  });
+}
+function assignThirds(){
+  const ranking=thirdsRanking();
+  const qualified=ranking.slice(0,8).map(t=>t.group); // groups whose 3rd qualifies
+  const qSet=new Set(qualified);
+  // bipartite matching: slots <- groups
+  const slots=THIRD_SLOTS.map(s=>({...s,pool:s.pool.filter(g=>qSet.has(g))}));
+  // backtracking to assign each slot a distinct group from its pool
+  const assign={};
+  const order=[...slots].sort((a,b)=>a.pool.length-b.pool.length);
+  const used=new Set();
+  function bt(i){
+    if(i>=order.length)return true;
+    for(const g of order[i].pool){if(used.has(g))continue;used.add(g);assign[order[i].num]=g;
+      if(bt(i+1))return true;used.delete(g);delete assign[order[i].num]}
+    return false;
+  }
+  const ok=bt(0);
+  // map: group -> 3rd team en
+  const thirdOf={};ranking.forEach(t=>thirdOf[t.group]=t.en);
+  const slotTeam={}; // matchNum -> en
+  if(ok){for(const num in assign)slotTeam[num]=thirdOf[assign[num]];}
+  return {ranking,qualified,slotTeam,ok,thirdOf};
+}
+let THIRDS=null;
+function refreshThirds(){THIRDS=assignThirds()}
+
+/* ---------- resolve KO participants ---------- */
+function winnerOf(m){const o=outcome(m);if(!o)return null;
+  if(o.h>o.a)return slotEn(m,'home');if(o.a>o.h)return slotEn(m,'away');
+  // draw: penalties winner if recorded
+  if(o.pso==='home')return slotEn(m,'home');if(o.pso==='away')return slotEn(m,'away');return null;}
+function loserOf(m){const o=outcome(m);if(!o)return null;
+  if(o.h>o.a)return slotEn(m,'away');if(o.a>o.h)return slotEn(m,'home');
+  if(o.pso==='home')return slotEn(m,'away');if(o.pso==='away')return slotEn(m,'home');return null;}
+function slotEn(m,side){const t=resolveTeams(m);return t[side]}
+const _resCache={};
+function resolveTeams(m){
+  if(_resCache[m.num])return _resCache[m.num];
+  const out={home:null,away:null};
+  ['home','away'].forEach(side=>{const s=m[side];out[side]=resolveSlot(s)});
+  _resCache[m.num]=out;return out;
+}
+function resolveSlot(s){
+  if(!s)return null;
+  if(s.type==='team')return s.name_en;
+  if(s.type==='winner_group'){const st=computeStandings(s.group);return st[0]&&st[0].P>=0?(allPlayed(s.group)||hasAny(s.group)?st[0].en:null):null}
+  if(s.type==='runnerup_group'){const st=computeStandings(s.group);return (hasAny(s.group)?(st[1]?st[1].en:null):null)}
+  if(s.type==='third'){return THIRDS?THIRDS.slotTeam[curMatchForThird(s)]||null:null}
+  if(s.type==='winner_match'){return winnerOf(matchByNum(s.match))}
+  if(s.type==='loser_match'){return loserOf(matchByNum(s.match))}
+  return null;
+}
+function curMatchForThird(s){ // find the match num that owns this third-slot object
+  for(const m of DATA.matches){if(m.home===s||m.away===s)return m.num;}
+  // fallback: match by pool identity
+  for(const ts of THIRD_SLOTS){if(ts.pool.join()===s.pool.join())return ts.num}
+  return null;
+}
+function hasAny(g){return groupMatches(g).some(m=>outcome(m))}
+function allPlayed(g){return groupMatches(g).every(m=>outcome(m))}
+
+/* group winner/runnerup: only show once group has standings basis */
+function slotLabel(s){
+  if(!s)return '—';
+  if(s.type==='team')return teamFlag(s.name_en)+' '+teamHe(s.name_en);
+  if(s.type==='winner_group')return 'מנצחת בית '+GROUP_HE[s.group];
+  if(s.type==='runnerup_group')return 'סגנית בית '+GROUP_HE[s.group];
+  if(s.type==='third')return 'שלישית ('+s.pool.map(g=>GROUP_HE[g]).join('/')+')';
+  if(s.type==='winner_match')return 'מנצחת משחק '+s.match;
+  if(s.type==='loser_match')return 'מפסידת משחק '+s.match;
+  return '—';
+}
+function resolvedSideLabel(m,side){
+  const en=resolveTeams(m)[side];
+  if(en)return teamFlag(en)+' '+teamHe(en);
+  return slotLabel(m[side]);
+}
+
+/* ---------- recompute everything ---------- */
+function recompute(){for(const k in _resCache)delete _resCache[k];refreshThirds();for(const k in _resCache)delete _resCache[k];}
+
+/* ===================== RENDERING ===================== */
+function render(){
+  recompute();
+  const v=document.getElementById('view');
+  if(CURV==='dash')v.innerHTML=renderDash();
+  else if(CURV==='groups')v.innerHTML=renderGroups();
+  else if(CURV==='knockout')v.innerHTML=renderKnockout();
+  bindDynamic();
+}
+
+function outcomeDot(o){const k=o?o.kind:'none';return '<span class="dot '+k+'"></span>'}
+function kindPill(kind){const map={result:'תוצאה',pred:'ניחוש',ai:'תחזית AI'};return kind?'<span class="pill '+kind+'">'+map[kind]+'</span>':''}
+
+/* ---------- DASHBOARD ---------- */
+function renderDash(){
+  const ov=DATA.overall||{};const cons=ov.consensus||{};
+  let h='';
+  h+='<div class="card"><div class="hd">🏆 קונצנזוס מודלי ה-AI — כל הטורניר</div><div class="bd hero">';
+  if(cons.champion_likely)h+='<div class="big">אלופה סבירה: <b>'+esc(cons.champion_likely)+'</b></div>';
+  if(cons.finalists_likely&&cons.finalists_likely.length)h+='<div class="tiny">גמר צפוי: '+cons.finalists_likely.map(esc).join(' — ')+'</div>';
+  if(cons.top_contenders&&cons.top_contenders.length){h+='<div class="chips">'+cons.top_contenders.map(t=>'<span class="chip">'+esc(t)+'</span>').join('')+'</div>'}
+  if(cons.main_dark_horses&&cons.main_dark_horses.length)h+='<div class="tiny" style="margin-top:6px">🐎 סוסים שחורים: '+cons.main_dark_horses.map(esc).join(', ')+'</div>';
+  // per-model champion
+  const picks=[];for(const mdl in (ov.models||{})){const o=ov.models[mdl];if(o.champion)picks.push('<span class="chip">'+mdl+': '+esc(o.champion)+'</span>')}
+  if(picks.length)h+='<div class="modelpick" style="margin-top:8px">'+picks.join('')+'</div>';
+  if(cons.summary)h+='<div class="note">'+esc(cons.summary)+'</div>';
+  h+='</div></div>';
+
+  // upcoming / today
+  const today=new Date().toISOString().slice(0,10);
+  const upcoming=DATA.matches.filter(m=>m.date>=today).sort((a,b)=>a.kickoff_utc<b.kickoff_utc?-1:1).slice(0,6);
+  const recent=DATA.matches.filter(m=>STORE.results[m.num]).sort((a,b)=>a.kickoff_utc<b.kickoff_utc?1:-1).slice(0,4);
+  h+='<div class="section-title">⏱️ המשחקים הקרובים</div><div class="card"><div class="bd" style="padding:0">';
+  if(upcoming.length)upcoming.forEach(m=>h+=miniMatch(m));else h+='<div class="bd tiny">אין משחקים קרובים — הטורניר הסתיים או שכל המשחקים עברו.</div>';
+  h+='</div></div>';
+  if(recent.length){h+='<div class="section-title">✅ תוצאות אחרונות שהוזנו</div><div class="card"><div class="bd" style="padding:0">';recent.forEach(m=>h+=miniMatch(m));h+='</div></div>';}
+
+  // qualified snapshot
+  h+='<div class="section-title">📊 מצב העפלה (לפי המצב הנוכחי)</div><div class="grid g3">';
+  for(const g of 'ABCDEFGHIJKL'){const st=computeStandings(g);
+    h+='<div class="card"><div class="hd" style="font-size:13px">בית '+GROUP_HE[g]+'</div><div class="bd" style="padding:6px 10px">';
+    st.slice(0,2).forEach((t,i)=>h+='<div class="kv"><span>'+(i+1)+'. '+teamFlag(t.en)+' '+teamHe(t.en)+'</span><b>'+t.Pts+'</b></div>');
+    h+='</div></div>';
+  }
+  h+='</div>';
+  h+='<p class="tiny" style="margin-top:14px">מקורות: לוח המשחקים — ויקיפדיה (Mundial 2026); ניתוחים — תיקיית הדרייב שלך (132 מסמכי AI: קלוד, צ׳אט-GPT, ג׳מיני, פרפלקסיטי).</p>';
+  return h;
+}
+function miniMatch(m){
+  const o=outcome(m);const t=resolveTeams(m);
+  const hn=t.home?teamFlag(t.home)+' '+teamHe(t.home):slotLabel(m.home);
+  const an=t.away?teamFlag(t.away)+' '+teamHe(t.away):slotLabel(m.away);
+  const sc=o?(o.h+' : '+o.a):'—';
+  return '<div class="match" data-match="'+m.num+'"><div class="m-side">'+outcomeDot(o)+'</div>'
+    +'<div class="m-teams"><div class="m-line"><span class="m-team"><span class="nm">'+hn+'</span></span>'
+    +'<span class="m-score">'+sc+'</span><span class="m-team" style="justify-content:flex-end"><span class="nm">'+an+'</span></span></div>'
+    +'<div class="m-meta"><span>'+(m.stage==='group'?'בית '+GROUP_HE[m.group]:STAGE_HE[m.stage])+'</span><span>'+fmtDate(m.date)+' · '+m.time_local+'</span><span>'+esc(m.city)+'</span></div></div></div>';
+}
+
+/* ---------- GROUPS ---------- */
+function renderGroups(){
+  let h='<div class="legend"><span><span class="dot result"></span>תוצאת אמת</span><span><span class="dot pred"></span>ניחוש שלך</span><span><span class="dot ai"></span>תחזית AI</span><span><span class="qb q1"></span>1-2 עולות</span><span><span class="qb q3"></span>3 — מועמדת</span></div>';
+  h+='<div class="grid g2">';
+  for(const g of 'ABCDEFGHIJKL'){h+=groupCard(g)}
+  h+='</div>';
+  return h;
+}
+function groupCard(g){
+  const st=computeStandings(g);
+  const syn=(DATA.groups_synthesis||{})[g];
+  let h='<div class="card"><div class="hd">בית '+GROUP_HE[g]+'</div><div class="bd" style="padding:0">';
+  h+='<table class="stand"><thead><tr><th>#</th><th style="text-align:right">נבחרת</th><th>מש</th><th>נצ</th><th>תי</th><th>הפ</th><th>שע</th><th>הפרש</th><th>נק</th></tr></thead><tbody>';
+  st.forEach((t,i)=>{const cls=i<2?'adv':(i===2?'adv3':'');
+    h+='<tr class="'+cls+'"><td>'+(i+1)+'</td><td class="team">'+teamFlag(t.en)+' '+teamHe(t.en)+'</td>'
+      +'<td>'+t.P+'</td><td>'+t.W+'</td><td>'+t.D+'</td><td>'+t.L+'</td><td>'+t.GF+':'+t.GA+'</td><td>'+(t.GD>0?'+':'')+t.GD+'</td><td><b>'+t.Pts+'</b></td></tr>';});
+  h+='</tbody></table>';
+  h+='<div style="padding:4px 6px">';
+  groupMatches(g).sort((a,b)=>a.kickoff_utc<b.kickoff_utc?-1:1).forEach(m=>h+=matchRow(m));
+  h+='</div>';
+  if(syn&&syn.qualifiers_consensus&&syn.qualifiers_consensus.length){
+    h+='<div class="bd" style="border-top:1px solid var(--line)"><div class="tiny">🤖 קונצנזוס מודלים: עולות — <b style="color:var(--txt)">'+syn.qualifiers_consensus.map(esc).join(', ')+'</b>';
+    if(syn.third_place_outlook)h+=' · שלישית: '+esc(syn.third_place_outlook);
+    h+='</div>';
+    if(syn.model_disagreements)h+='<div class="tiny" style="margin-top:4px">⚖️ מחלוקת: '+esc(syn.model_disagreements)+'</div>';
+    h+='</div>';
+  }
+  h+='</div></div>';
+  return h;
+}
+function matchRow(m){
+  const o=outcome(m);
+  const hn=teamFlag(m.home.name_en)+' '+teamHe(m.home.name_en);
+  const an=teamHe(m.away.name_en)+' '+teamFlag(m.away.name_en);
+  const sc=o?(o.h+' : '+o.a):'<span class="tiny">vs</span>';
+  const kindTxt=o?({result:'תוצאה',pred:'ניחוש',ai:'AI'}[o.kind]):'';
+  let h='<div class="match" data-match="'+m.num+'"><div class="m-side">'+outcomeDot(o)+'<span class="tiny" style="font-size:9px">'+kindTxt+'</span></div>';
+  h+='<div class="m-teams"><div class="m-line"><span class="m-team"><span class="nm">'+hn+'</span></span><span class="m-score">'+sc+'</span><span class="m-team" style="justify-content:flex-end"><span class="nm">'+an+'</span></span></div>';
+  h+='<div class="m-meta"><span>'+fmtDate(m.date)+' · '+m.time_local+' ('+m.tz+')</span></div>';
+  const c=m.ai&&m.ai.consensus;
+  if(c)h+='<div class="ai-rec">🤖 <b>'+esc(c.winner||'')+(c.score?(' '+esc(c.score)):'')+'</b> · '+esc(c.rationale||'')+(c.basis==='derived_from_team_ratings'?' <span class="badge">נגזר מדירוג</span>':'')+'</div>';
+  h+='</div></div>';
+  return h;
+}
+
+/* ---------- KNOCKOUT ---------- */
+function renderKnockout(){
+  let h='';
+  // path selector
+  let opts='<option value="">— בחר נבחרת לראות את המסלול שלה —</option>';
+  Object.values(DATA.teams).sort((a,b)=>a.he>b.he?1:-1).forEach(t=>opts+='<option value="'+t.en+'"'+(PATH_TEAM===t.en?' selected':'')+'>'+t.flag+' '+t.he+'</option>');
+  h+='<div class="card"><div class="bd"><select class="teamsel" id="pathSel">'+opts+'</select>';
+  if(PATH_TEAM)h+='<div class="tiny" style="margin-top:6px">מודגש בזהב: המסלול של <b style="color:var(--gold)">'+teamHe(PATH_TEAM)+'</b> עד הגמר (בהנחה שתעבור כל שלב).</div>';
+  h+='</div></div>';
+  if(THIRDS){
+    h+='<div class="card"><div class="hd">🥉 8 השלישיות העולות (לפי המצב הנוכחי)</div><div class="bd"><div class="chips">';
+    THIRDS.ranking.slice(0,8).forEach((t,i)=>h+='<span class="chip">'+(i+1)+'. '+teamFlag(t.en)+' '+teamHe(t.en)+' ('+GROUP_HE[t.group]+', '+t.Pts+'נק)</span>');
+    h+='</div>';
+    if(!THIRDS.ok)h+='<div class="note">לא ניתן לשבץ שלישיות לפי הכללים עדיין (חסרות תוצאות).</div>';
+    h+='</div></div>';
+  }
+  const pathSet=PATH_TEAM?routeForTeam(PATH_TEAM):new Set();
+  ['R32','R16','QF','SF','3RD','FINAL'].forEach(stage=>{
+    const ms=DATA.matches.filter(m=>m.stage===stage).sort((a,b)=>a.num-b.num);
+    h+='<div class="section-title">'+STAGE_HE[stage]+'</div><div class="kround">';
+    ms.forEach(m=>h+=koCard(m,pathSet));
+    h+='</div>';
+  });
+  return h;
+}
+function koCard(m,pathSet){
+  const o=outcome(m);const t=resolveTeams(m);
+  const wEn=winnerOf(m);
+  function side(side){const en=t[side];const isW=en&&wEn===en;
+    return '<div class="ko-team'+(isW?' win':'')+'"><span class="nm">'+resolvedSideLabel(m,side)+'</span><b>'+(o?(side==='home'?o.h:o.a):'')+'</b></div>';}
+  const cls='ko-card'+(pathSet.has(m.num)?' path':'');
+  return '<div class="'+cls+'" data-match="'+m.num+'"><div class="ko-num">#'+m.num+''+(o?'<span class="dot '+o.kind+'" style="margin:0 auto"></span>':'')+'</div><div class="kteams">'+side('home')+side('away')+'</div></div>';
+}
+function nextMatchFor(num){
+  return DATA.matches.find(m=>['home','away'].some(s=>m[s]&&m[s].type==='winner_match'&&m[s].match===num));
+}
+function routeForTeam(en){
+  const set=new Set();
+  // find R32 match containing team
+  let cur=DATA.matches.find(m=>m.stage==='R32'&&(resolveTeams(m).home===en||resolveTeams(m).away===en));
+  while(cur){set.add(cur.num);const nx=nextMatchFor(cur.num);if(!nx||nx.num===cur.num)break;cur=nx;}
+  return set;
+}
+
+/* ===================== MATCH MODAL ===================== */
+function openMatch(num){
+  const m=matchByNum(num);if(!m)return;
+  const t=resolveTeams(m);
+  const homeEn=t.home,awayEn=t.away;
+  const hLabel=homeEn?(teamFlag(homeEn)+' '+teamHe(homeEn)):slotLabel(m.home);
+  const aLabel=awayEn?(teamFlag(awayEn)+' '+teamHe(awayEn)):slotLabel(m.away);
+  const res=STORE.results[num]||{};const pred=STORE.predictions[num]||{};
+  let h='<div class="mhd"><b>'+(m.stage==='group'?'בית '+GROUP_HE[m.group]:STAGE_HE[m.stage])+'</b><span class="tiny">'+fmtDate(m.date)+' · '+m.time_local+' ('+m.tz+')</span><button class="close" data-close>×</button></div><div class="mbd">';
+  h+='<div class="tiny" style="text-align:center;margin-bottom:6px">📍 '+esc(m.venue)+', '+esc(m.city)+'</div>';
+  h+='<div style="text-align:center;font-weight:700;font-size:16px">'+hLabel+' <span class="tiny">נגד</span> '+aLabel+'</div>';
+
+  // mode tabs: result vs prediction
+  h+='<div class="seg" id="modeSeg" style="margin-top:12px"><button data-mode="result" class="on">תוצאת אמת</button><button data-mode="pred">הניחוש שלי</button></div>';
+
+  // RESULT editor
+  h+='<div id="paneResult">';
+  h+=scoreEditor(num,homeEn,awayEn,res,'result');
+  h+='<div class="note">הזן את התוצאה הרשמית. אפשר להוסיף אירועים (שערים, כרטיסים, קרנות) עם דקה מדויקת.</div>';
+  h+=eventsEditor(num,homeEn,awayEn);
+  if(m.stage!=='group'){h+=psoEditor(num,homeEn,awayEn,res)}
+  h+='</div>';
+
+  // PRED editor (hidden by default)
+  h+='<div id="panePred" style="display:none">';
+  h+=scoreEditor(num,homeEn,awayEn,pred,'pred');
+  if(m.stage!=='group'){h+=psoEditor(num,homeEn,awayEn,pred,true)}
+  h+='<div class="note">הניחוש שלך מזין את הטבלאות והעץ עד שתיכנס תוצאת אמת (שמחליפה אותו אוטומטית).</div>';
+  h+='</div>';
+
+  // AI box
+  h+=aiBox(m,homeEn,awayEn);
+
+  // team analysis quick links (group)
+  if(m.stage==='group'){h+=teamAnalysisBlock(homeEn)+teamAnalysisBlock(awayEn)}
+
+  h+='</div>';
+  const modal=document.getElementById('matchModal');modal.innerHTML=h;
+  document.getElementById('matchBg').classList.add('on');
+  bindModal(num,m);
+}
+function scoreEditor(num,h,a,val,kind){
+  const hn=h?teamHe(h):'בית';const an=a?teamHe(a):'חוץ';
+  return '<div class="score-edit"><div class="te"><div class="tiny">'+esc(hn)+'</div>'
+    +'<input type="number" min="0" max="99" id="'+kind+'_h" value="'+(val.h??'')+'"></div>'
+    +'<div style="font-size:22px">:</div>'
+    +'<div class="te"><div class="tiny">'+esc(an)+'</div>'
+    +'<input type="number" min="0" max="99" id="'+kind+'_a" value="'+(val.a??'')+'"></div></div>';
+}
+function psoEditor(num,h,a,val,isPred){
+  const id=isPred?'pred_pso':'res_pso';
+  return '<div class="tiny" style="text-align:center;margin-top:-4px">אם תיקו — מי עלתה בפנדלים?</div>'
+    +'<div class="seg"><button data-pso="" class="'+(!val.pso?'on':'')+'" id="'+id+'_n">—</button>'
+    +'<button data-pso="home" class="'+(val.pso==='home'?'on':'')+'" id="'+id+'_h">'+(h?teamHe(h):'בית')+'</button>'
+    +'<button data-pso="away" class="'+(val.pso==='away'?'on':'')+'" id="'+id+'_a">'+(a?teamHe(a):'חוץ')+'</button></div>';
+}
+function eventsEditor(num,h,a){
+  const res=STORE.results[num]||{};const ev=res.events||[];
+  let h2='<div class="events"><div class="tiny" style="margin-bottom:4px">אירועי המשחק (דקה מדויקת):</div><div id="evList">';
+  ev.forEach((e,i)=>h2+=evRow(e,i,h,a));
+  h2+='</div><button class="btn sm" id="addEvt" style="margin-top:6px">＋ הוסף אירוע</button></div>';
+  return h2;
+}
+function evRow(e,i,h,a){
+  const types=[['goal','⚽ שער'],['assist','🅰️ בישול'],['yellow','🟨 צהוב'],['red','🟥 אדום'],['corner','🚩 קרן'],['pen','🥅 פנדל'],['og','⚽ עצמי'],['sub','🔁 חילוף']];
+  const topt=types.map(t=>'<option value="'+t[0]+'"'+(e.type===t[0]?' selected':'')+'>'+t[1]+'</option>').join('');
+  const sopt='<option value="home"'+(e.team==='home'?' selected':'')+'>'+(h?teamHe(h):'בית')+'</option><option value="away"'+(e.team==='away'?' selected':'')+'>'+(a?teamHe(a):'חוץ')+'</option>';
+  return '<div class="evt" data-i="'+i+'"><input class="min" type="text" placeholder="דק׳" value="'+esc(e.min||'')+'"><select class="ty">'+topt+'</select><select class="tm">'+sopt+'</select><input class="pl" type="text" placeholder="שחקן (לא חובה)" value="'+esc(e.player||'')+'"><button class="btn sm delEvt">✕</button></div>';
+}
+function aiBox(m,homeEn,awayEn){
+  let h='<hr class="sep"><div style="font-weight:700;margin-bottom:6px">🤖 המלצת מודלי ה-AI</div>';
+  if(m.stage==='group'&&m.ai){
+    const c=m.ai.consensus||{};
+    h+='<div class="ai-rec" style="font-size:13px"><b>המלצה מאוחדת: '+esc(c.winner||'—')+(c.score?(' ('+esc(c.score)+')'):'')+'</b>'
+      +(c.confidence?(' · ביטחון '+esc(c.confidence)):'')+(c.basis==='derived_from_team_ratings'?' <span class="badge">נגזר מדירוג</span>':'')
+      +'<br>'+esc(c.rationale||'')+'</div>';
+    const md=m.ai.models||{};
+    h+='<details class="an"><summary>פירוט לכל מודל</summary>';
+    for(const k in md){const p=md[k];if(!p)continue;
+      h+='<div class="modelrow"><span class="mn">'+k+':</span> '+esc(p.winner||'')+(p.score?(' '+esc(p.score)):'')+(p.confidence?(' · '+esc(p.confidence)):'')+(p.reasoning?('<div class="tiny">'+esc(p.reasoning)+'</div>'):'')+'</div>';
+    }
+    h+='</details>';
+  } else {
+    // knockout derived rec
+    if(homeEn&&awayEn){const w=stronger(homeEn,awayEn);
+      h+='<div class="ai-rec" style="font-size:13px"><b>המלצה: '+teamHe(w)+'</b> <span class="badge">נגזר מדירוג המודלים</span><br>'
+        +teamHe(homeEn)+' (עוצמה '+Math.round(STRENGTH[homeEn]||0)+') מול '+teamHe(awayEn)+' (עוצמה '+Math.round(STRENGTH[awayEn]||0)+'). '
+        +'בשלב הנוקאאוט המודלים לא ניבחו ספציפית — ההמלצה נגזרת מפרופיל העוצמה הכולל של כל נבחרת בניתוחים.</div>';
+    } else {
+      h+='<div class="tiny">המשתתפות בשלב זה ייקבעו לפי תוצאות השלבים הקודמים.</div>';
+    }
+  }
+  return h;
+}
+function teamAnalysisBlock(en){
+  if(!en)return '';const t=DATA.teams[en];if(!t||!t.analysis)return '';
+  const c=t.analysis.consensus;const md=t.analysis.models||{};
+  let h='<details class="an"><summary>📋 ניתוח '+teamHe(en)+'</summary>';
+  if(c&&c.one_liner)h+='<div class="tiny" style="margin:4px 0">'+esc(c.one_liner)+'</div>';
+  for(const k in md){const p=md[k];if(!p||(!p.summary&&!(p.strengths||[]).length))continue;
+    h+='<div class="modelrow"><span class="mn">'+k+'</span>'+(p.projected_rank?(' · מקום '+p.projected_rank):'')+(p.qualification_pct?(' · '+p.qualification_pct+'% העפלה'):'');
+    if(p.summary)h+='<div class="tiny">'+esc(p.summary)+'</div>';
+    if((p.strengths||[]).length)h+='<div class="tiny">✅ '+p.strengths.map(esc).join(' · ')+'</div>';
+    if((p.weaknesses||[]).length)h+='<div class="tiny">⚠️ '+p.weaknesses.map(esc).join(' · ')+'</div>';
+    if((p.key_players||[]).length)h+='<div class="tiny">⭐ '+p.key_players.map(esc).join(', ')+'</div>';
+    h+='</div>';
+  }
+  h+='</details>';return h;
+}
+
+/* ===================== BINDINGS ===================== */
+function bindDynamic(){
+  document.querySelectorAll('[data-match]').forEach(el=>el.onclick=()=>openMatch(+el.getAttribute('data-match')));
+  const ps=document.getElementById('pathSel');if(ps)ps.onchange=()=>{PATH_TEAM=ps.value;render()};
+}
+function bindModal(num,m){
+  const modal=document.getElementById('matchModal');
+  modal.querySelectorAll('[data-close]').forEach(b=>b.onclick=closeMatch);
+  // mode toggle
+  modal.querySelectorAll('#modeSeg button').forEach(b=>b.onclick=()=>{
+    modal.querySelectorAll('#modeSeg button').forEach(x=>x.classList.remove('on'));b.classList.add('on');
+    const mode=b.getAttribute('data-mode');
+    document.getElementById('paneResult').style.display=mode==='result'?'':'none';
+    document.getElementById('panePred').style.display=mode==='pred'?'':'none';
+  });
+  function readScore(kind){const h=document.getElementById(kind+'_h').value;const a=document.getElementById(kind+'_a').value;return {h:h===''?'':+h,a:a===''?'':+a}}
+  // result inputs
+  ['result_h','result_a'].forEach(id=>{const el=document.getElementById(id);if(el)el.oninput=()=>{
+    const s=readScore('result');STORE.results[num]=Object.assign(STORE.results[num]||{},{h:s.h,a:s.a});
+    if(s.h===''&&s.a===''){const ev=STORE.results[num].events;delete STORE.results[num];if(ev&&ev.length)STORE.results[num]={events:ev}}
+    saveStore();softRefresh();
+  }});
+  ['pred_h','pred_a'].forEach(id=>{const el=document.getElementById(id);if(el)el.oninput=()=>{
+    const s=readScore('pred');if(s.h===''&&s.a==='')delete STORE.predictions[num];else STORE.predictions[num]=Object.assign(STORE.predictions[num]||{},{h:s.h,a:s.a});
+    saveStore();softRefresh();
+  }});
+  // pso
+  modal.querySelectorAll('[id^=res_pso]').forEach(b=>b.onclick=()=>{const v=b.getAttribute('data-pso');STORE.results[num]=Object.assign(STORE.results[num]||{},{pso:v});saveStore();openMatch(num)});
+  modal.querySelectorAll('[id^=pred_pso]').forEach(b=>b.onclick=()=>{const v=b.getAttribute('data-pso');STORE.predictions[num]=Object.assign(STORE.predictions[num]||{},{pso:v});saveStore();openMatch(num)});
+  // events
+  const add=document.getElementById('addEvt');if(add)add.onclick=()=>{STORE.results[num]=STORE.results[num]||{};STORE.results[num].events=STORE.results[num].events||[];STORE.results[num].events.push({min:'',type:'goal',team:'home',player:''});saveStore();openMatch(num)};
+  modal.querySelectorAll('.evt').forEach(row=>{
+    const i=+row.getAttribute('data-i');
+    function upd(){const ev=STORE.results[num].events[i];ev.min=row.querySelector('.min').value;ev.type=row.querySelector('.ty').value;ev.team=row.querySelector('.tm').value;ev.player=row.querySelector('.pl').value;saveStore()}
+    row.querySelectorAll('input,select').forEach(inp=>inp.onchange=upd);
+    row.querySelector('.delEvt').onclick=()=>{STORE.results[num].events.splice(i,1);saveStore();openMatch(num)};
+  });
+}
+function softRefresh(){ // re-render background without closing modal
+  recompute();updateUpdatedLabel();
+}
+function closeMatch(){document.getElementById('matchBg').classList.remove('on');render()}
+
+/* ===================== APP SHELL ===================== */
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+function updateUpdatedLabel(){
+  const el=document.getElementById('updated');
+  const built=DATA&&DATA.meta&&DATA.meta.built?DATA.meta.built:'';
+  const lastUp=DATA&&DATA.meta&&DATA.meta.last_results_update?(' · עודכן תוצאות: '+DATA.meta.last_results_update):'';
+  el.textContent='נתוני בסיס: '+built+lastUp;
+}
+async function loadData(bust){
+  const url='data.json'+(bust?('?t='+Date.now()):'');
+  const r=await fetch(url,{cache:'no-store'});
+  DATA=await r.json();
+  DATA._byNum={};DATA.matches.forEach(m=>DATA._byNum[m.num]=m);
+  buildStrength();buildThirdSlots();
+  updateUpdatedLabel();
+}
+function setView(v){CURV=v;document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.getAttribute('data-v')===v));render()}
+
+document.getElementById('tabs').addEventListener('click',e=>{const b=e.target.closest('button');if(b)setView(b.getAttribute('data-v'))});
+document.getElementById('matchBg').addEventListener('click',e=>{if(e.target.id==='matchBg')closeMatch()});
+document.getElementById('btnRefresh').onclick=async()=>{document.getElementById('btnRefresh').textContent='⏳';await loadData(true);render();document.getElementById('btnRefresh').textContent='🔄 רענון';toast('הנתונים עודכנו')};
+// settings menu
+const menuBg=document.getElementById('menuBg');
+document.getElementById('btnMenu').onclick=()=>{syncSeedSeg();menuBg.classList.add('on')};
+menuBg.addEventListener('click',e=>{if(e.target.id==='menuBg'||e.target.hasAttribute('data-close'))menuBg.classList.remove('on')});
+function syncSeedSeg(){document.querySelectorAll('#seedSeg button').forEach(b=>b.classList.toggle('on',(+b.getAttribute('data-seed'))===(STORE.settings.seedFromAI?1:0)))}
+document.querySelectorAll('#seedSeg button').forEach(b=>b.onclick=()=>{STORE.settings.seedFromAI=(b.getAttribute('data-seed')==='1');saveStore();syncSeedSeg();render()});
+document.getElementById('btnExport').onclick=()=>{
+  const blob=new Blob([JSON.stringify(STORE,null,1)],{type:'application/json'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='mundial26-my-data.json';a.click();toast('הקובץ יורד')};
+document.getElementById('btnImport').onclick=()=>document.getElementById('fileImport').click();
+document.getElementById('fileImport').onchange=e=>{const f=e.target.files[0];if(!f)return;const rd=new FileReader();rd.onload=()=>{try{const d=JSON.parse(rd.result);STORE=Object.assign({results:{},predictions:{},settings:{seedFromAI:true}},d);saveStore();menuBg.classList.remove('on');render();toast('הנתונים יובאו')}catch(x){toast('קובץ לא תקין')}};rd.readAsText(f)};
+document.getElementById('btnReset').onclick=()=>{if(confirm('לאפס את כל הניחושים והתוצאות שהזנת? פעולה זו אינה הפיכה.')){STORE={results:{},predictions:{},settings:{seedFromAI:STORE.settings.seedFromAI}};saveStore();menuBg.classList.remove('on');render();toast('אופס')}};
+
+/* boot */
+loadStore();
+loadData().then(()=>{render()}).catch(e=>{document.getElementById('view').innerHTML='<div class="loading">שגיאה בטעינת הנתונים: '+esc(e.message)+'</div>'});
+</script>
+</body>
+</html>
