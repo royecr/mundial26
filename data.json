@@ -3523,7 +3523,11 @@
      "basis": "models",
      "rationale": "קונצנזוס מלא לניצחון מקסיקני; הפתעה אפשרית רק כתיקו דל שערים בזכות וויליאמס."
     },
-    "consensus_winner_en": "Mexico"
+    "consensus_winner_en": "Mexico",
+    "pred": {
+     "h": 2,
+     "a": 0
+    }
    }
   },
   {
@@ -3577,7 +3581,11 @@
      "basis": "models",
      "rationale": "התוצאה שמארגנת את המרדף למקום השני כבר מהמחזור הראשון; קונצנזוס רחב על 1:1."
     },
-    "consensus_winner_en": "DRAW"
+    "consensus_winner_en": "DRAW",
+    "pred": {
+     "h": 1,
+     "a": 1
+    }
    }
   },
   {
@@ -3631,7 +3639,11 @@
      "basis": "models",
      "rationale": "'גמר מוקדם' על המקום השני; שני המודלים נתנו 1:1 כתוצאה המרכזית, תלוי בכשירות דייויס."
     },
-    "consensus_winner_en": "DRAW"
+    "consensus_winner_en": "DRAW",
+    "pred": {
+     "h": 1,
+     "a": 1
+    }
    }
   },
   {
@@ -3685,7 +3697,11 @@
      "basis": "models",
      "rationale": "ארה\"ב פייבוריטית בזכות ביתיות ואיכות התקפית; תיקו דל-שערים הוא תרחיש ההפתעה הסביר (~29%)."
     },
-    "consensus_winner_en": "United States"
+    "consensus_winner_en": "United States",
+    "pred": {
+     "h": 1,
+     "a": 0
+    }
    }
   },
   {
@@ -3739,7 +3755,11 @@
      "basis": "models",
      "rationale": "משחק הפתיחה שקובע את המקום השלישי בבית; סקוטלנד מועדפת אך לא בפער מוחץ, פוטנציאל הפתעה גבוה (תיקו ~28-30%). גורם מכריע: שער ראשון."
     },
-    "consensus_winner_en": "Scotland"
+    "consensus_winner_en": "Scotland",
+    "pred": {
+     "h": 0,
+     "a": 1
+    }
    }
   },
   {
@@ -3793,7 +3813,11 @@
      "basis": "models",
      "rationale": "איכות טורקית מול ארגון ופיזיות אוסטרליים; משחק פתיחה עצבני עם פוטנציאל הפתעה גבוה."
     },
-    "consensus_winner_en": null
+    "consensus_winner_en": null,
+    "pred": {
+     "h": 1,
+     "a": 1
+    }
    }
   },
   {
@@ -3847,7 +3871,11 @@
      "basis": "models",
      "rationale": "המשחק השנוי ביותר במחלוקת בבית; ברזיל איכותית יותר אך מרוקו היחידה שיכולה לנטרל אותה. גורם מכריע: כשירות ניימאר ואגף ויניסיוס מול חכימי."
     },
-    "consensus_winner_en": "Brazil"
+    "consensus_winner_en": "Brazil",
+    "pred": {
+     "h": 2,
+     "a": 1
+    }
    }
   },
   {
@@ -3901,7 +3929,11 @@
      "basis": "models",
      "rationale": "המשחק עם הקונצנזוס הרחב ביותר בבית; כל המסמכים בחרו ניצחון שווייצרי, רובם 0:2."
     },
-    "consensus_winner_en": "Switzerland"
+    "consensus_winner_en": "Switzerland",
+    "pred": {
+     "h": 0,
+     "a": 2
+    }
    }
   },
   {
@@ -3955,7 +3987,11 @@
      "basis": "models",
      "rationale": "המשחק שמכריע את המאבק על המקום השני; שקול אמיתי, יכול ליפול לכל כיוון בשער בודד."
     },
-    "consensus_winner_en": "DRAW"
+    "consensus_winner_en": "DRAW",
+    "pred": {
+     "h": 1,
+     "a": 1
+    }
    }
   },
   {
@@ -4009,7 +4045,11 @@
      "basis": "models",
      "rationale": "המשחק החד-צדדי ביותר בבית; פוטנציאל הפתעה נמוך, לכל היותר תיקו דל אם רום ביום גדול."
     },
-    "consensus_winner_en": "Germany"
+    "consensus_winner_en": "Germany",
+    "pred": {
+     "h": 3,
+     "a": 0
+    }
    }
   },
   {
@@ -4063,7 +4103,11 @@
      "basis": "models",
      "rationale": "שני המודלים צופים 1-1 עם נטייה קלה להולנד; זהו משחק המפתח להכרעת ראשות הבית, פוטנציאל הפתעה גבוה ליפן."
     },
-    "consensus_winner_en": "DRAW"
+    "consensus_winner_en": "DRAW",
+    "pred": {
+     "h": 1,
+     "a": 1
+    }
    }
   },
   {
@@ -4117,7 +4161,11 @@
      "basis": "models",
      "rationale": "נטייה לשוודיה אך אי-ודאות גבוהה; Claude צופה 1-0 שוודיה, ChatGPT צופה תיקו 1-1. טוניסיה אנדרדוג מסוכן בזכות חום ובלוק נמוך."
     },
-    "consensus_winner_en": null
+    "consensus_winner_en": null,
+    "pred": {
+     "h": 1,
+     "a": 0
+    }
    }
   },
   {
@@ -4171,7 +4219,11 @@
      "basis": "models",
      "rationale": "סיכום הבית: 1:0 לאורוגוואי, ~55%. המשחק עם פוטנציאל ההפתעה הגבוה ביותר בבית - סעודיה יכולה לחטוף נקודה."
     },
-    "consensus_winner_en": "Uruguay"
+    "consensus_winner_en": "Uruguay",
+    "pred": {
+     "h": 0,
+     "a": 1
+    }
    }
   },
   {
@@ -4225,7 +4277,11 @@
      "basis": "models",
      "rationale": "סיכום הבית: 2:0 לספרד, ביטחון ~85%; פוטנציאל הפתעה נמוך-בינוני (תיקו דל אם ספרד 'תירדם')."
     },
-    "consensus_winner_en": "Spain"
+    "consensus_winner_en": "Spain",
+    "pred": {
+     "h": 2,
+     "a": 0
+    }
    }
   },
   {
@@ -4279,7 +4335,11 @@
      "basis": "models",
      "rationale": "חלון הנקודה הריאלי היחיד של ניו זילנד; משחק חובה לשתיהן שעלול להסתבך אם איראן לא תכבוש מוקדם."
     },
-    "consensus_winner_en": "Iran"
+    "consensus_winner_en": "Iran",
+    "pred": {
+     "h": 1,
+     "a": 0
+    }
    }
   },
   {
@@ -4333,7 +4393,11 @@
      "basis": "models",
      "rationale": "המשחק עם פוטנציאל ההפתעה הגבוה ביותר בבית; בלגיה פייבוריטית אך לא חסינה מול מעברי סלאח-מרמוש."
     },
-    "consensus_winner_en": "Belgium"
+    "consensus_winner_en": "Belgium",
+    "pred": {
+     "h": 2,
+     "a": 1
+    }
    }
   },
   {
@@ -4387,7 +4451,11 @@
      "basis": "models",
      "rationale": "שני המודלים תואמים 2:1 לצרפת; המשחק עם פוטנציאל ההפתעה הגבוה ביותר בבית (זיכרון 2002 ופתיחה טעונה)."
     },
-    "consensus_winner_en": "France"
+    "consensus_winner_en": "France",
+    "pred": {
+     "h": 2,
+     "a": 1
+    }
    }
   },
   {
@@ -4441,7 +4509,11 @@
      "basis": "models",
      "rationale": "ניצחון נורווגי ברור; ההפתעה האפשרית היחידה היא תיקו דל שערים אם עיראק שורדת את הפתיחה."
     },
-    "consensus_winner_en": "Norway"
+    "consensus_winner_en": "Norway",
+    "pred": {
+     "h": 0,
+     "a": 2
+    }
    }
   },
   {
@@ -4501,7 +4573,11 @@
      "basis": "models",
      "rationale": "קונצנזוס מלא לניצחון ארגנטינה ~67%-68%; פוטנציאל הפתעה בינוני בלבד."
     },
-    "consensus_winner_en": "Argentina"
+    "consensus_winner_en": "Argentina",
+    "pred": {
+     "h": 2,
+     "a": 0
+    }
    }
   },
   {
@@ -4561,7 +4637,11 @@
      "basis": "models",
      "rationale": "קונצנזוס לניצחון אוסטרי (57%-62%); הפתעה אפשרית רק כתיקו דל-שערים."
     },
-    "consensus_winner_en": "Austria"
+    "consensus_winner_en": "Austria",
+    "pred": {
+     "h": 2,
+     "a": 0
+    }
    }
   },
   {
@@ -4615,7 +4695,11 @@
      "basis": "models",
      "rationale": "המשחק עם פוטנציאל ההפתעה הגבוה ביותר בבית - מכריע מי תיאבק על מקום שלישי וסיכוי העפלה. כאן גם המחלוקת המרכזית בין המודלים."
     },
-    "consensus_winner_en": null
+    "consensus_winner_en": null,
+    "pred": {
+     "h": 1,
+     "a": 1
+    }
    }
   },
   {
@@ -4669,7 +4753,11 @@
      "basis": "models",
      "rationale": "המשחק שקובע את צמרת הבית; פוטנציאל הפתעה גבוה לתיקו בשל עקרות אנגלית בהכנה וניסיון קרואטי."
     },
-    "consensus_winner_en": null
+    "consensus_winner_en": null,
+    "pred": {
+     "h": 1,
+     "a": 0
+    }
    }
   },
   {
@@ -4723,7 +4811,11 @@
      "basis": "models",
      "rationale": "שני המודלים חוזים ניצחון פורטוגל 2:0; הסיכון היחיד הוא תיקו דל-שערים אם פורטוגל לא תפרוץ בלוק נמוך."
     },
-    "consensus_winner_en": "Portugal"
+    "consensus_winner_en": "Portugal",
+    "pred": {
+     "h": 2,
+     "a": 0
+    }
    }
   },
   {
@@ -4777,7 +4869,11 @@
      "basis": "models",
      "rationale": "קונצנזוס לניצחון קולומביה צמוד (0:1/0:2); סיכון לתיקו מתסכל אם קולומביה לא תבקיע מוקדם."
     },
-    "consensus_winner_en": "Colombia"
+    "consensus_winner_en": "Colombia",
+    "pred": {
+     "h": 0,
+     "a": 1
+    }
    }
   },
   {
@@ -4831,7 +4927,11 @@
      "basis": "models",
      "rationale": "המשחק המכריע בבית ובעל פוטנציאל ההפתעה הגבוה; ההזדמנות הריאלית של דרום אפריקה לנקודות."
     },
-    "consensus_winner_en": null
+    "consensus_winner_en": null,
+    "pred": {
+     "h": 1,
+     "a": 1
+    }
    }
   },
   {
@@ -4885,7 +4985,11 @@
      "basis": "models",
      "rationale": "המשחק עם פוטנציאל ההפתעה הגבוה ביותר בבית; שווייץ עדיפה אך 'הכי עלולה להיתקע', תיקו תרחיש מרכזי."
     },
-    "consensus_winner_en": "Switzerland"
+    "consensus_winner_en": "Switzerland",
+    "pred": {
+     "h": 2,
+     "a": 1
+    }
    }
   },
   {
@@ -4939,7 +5043,11 @@
      "basis": "models",
      "rationale": "'המשחק שקנדה חייבת לנצח'; הסכמה רחבה על ניצחון קנדי, עם סיכון לתיקו מתסכל מול בלוק נמוך."
     },
-    "consensus_winner_en": "Canada"
+    "consensus_winner_en": "Canada",
+    "pred": {
+     "h": 2,
+     "a": 1
+    }
    }
   },
   {
@@ -4993,7 +5101,11 @@
      "basis": "models",
      "rationale": "משחק המפתח בבית ובעל פוטנציאל ההפתעה הגבוה ביותר; קוריאה יכולה לקחת נקודה ואף לנצח."
     },
-    "consensus_winner_en": null
+    "consensus_winner_en": null,
+    "pred": {
+     "h": 2,
+     "a": 1
+    }
    }
   },
   {
@@ -5047,7 +5159,11 @@
      "basis": "models",
      "rationale": "קונצנזוס כמעט מוחלט; פער האיכות האישי גבוה מאוד. גורם מכריע: שער ברזילאי מוקדם או רוטציה אם ההעפלה הובטחה."
     },
-    "consensus_winner_en": "Brazil"
+    "consensus_winner_en": "Brazil",
+    "pred": {
+     "h": 3,
+     "a": 0
+    }
    }
   },
   {
@@ -5101,7 +5217,11 @@
      "basis": "models",
      "rationale": "'משחק המפתח' להעפלת מרוקו; מרוקו עדיפה באיכות ובעומק אך סקוטלנד מסוגלת לסחוט תיקו דרך מצבים נייחים. גורם מכריע: כשירות אגרד ויכולת מרוקו לפרק בלוק נמוך."
     },
-    "consensus_winner_en": "Morocco"
+    "consensus_winner_en": "Morocco",
+    "pred": {
+     "h": 0,
+     "a": 1
+    }
    }
   },
   {
@@ -5155,7 +5275,11 @@
      "basis": "models",
      "rationale": "המשחק המפוצל ביותר בין המקורות; ניתוחי טורקיה רואים ניצחון טורקי, ניתוחי פראגוואי נוטים לתיקו. משחק מאוזן ומכריע."
     },
-    "consensus_winner_en": null
+    "consensus_winner_en": null,
+    "pred": {
+     "h": 1,
+     "a": 0
+    }
    }
   },
   {
@@ -5209,7 +5333,11 @@
      "basis": "models",
      "rationale": "המשחק עם ההסכמה הרחבה ביותר בבית; ארה\"ב עדיפה באיכות, מהירות וביתיות."
     },
-    "consensus_winner_en": "United States"
+    "consensus_winner_en": "United States",
+    "pred": {
+     "h": 2,
+     "a": 0
+    }
    }
   },
   {
@@ -5263,7 +5391,11 @@
      "basis": "models",
      "rationale": "המשחק הפיזי בבית; יתרון האיכות והשליטה של גרמניה צריך להספיק, אך תיקו סביר יותר מניצחון איבוארי."
     },
-    "consensus_winner_en": "Germany"
+    "consensus_winner_en": "Germany",
+    "pred": {
+     "h": 2,
+     "a": 1
+    }
    }
   },
   {
@@ -5317,7 +5449,11 @@
      "basis": "models",
      "rationale": "המשחק ש'חייבים' לאקוודור; פער ברור אך עם אזהרת קצב — תיקו מכוער אינו בלתי אפשרי אם אין שער מוקדם."
     },
-    "consensus_winner_en": "Ecuador"
+    "consensus_winner_en": "Ecuador",
+    "pred": {
+     "h": 2,
+     "a": 0
+    }
    }
   },
   {
@@ -5371,7 +5507,11 @@
      "basis": "models",
      "rationale": "הסכמה מלאה: 2-1 להולנד; פער איכות ועומק, עם חלון מעבר/נייח לשוודיה."
     },
-    "consensus_winner_en": "Netherlands"
+    "consensus_winner_en": "Netherlands",
+    "pred": {
+     "h": 2,
+     "a": 1
+    }
    }
   },
   {
@@ -5425,7 +5565,11 @@
      "basis": "models",
      "rationale": "הסכמה על 0-1 ליפן (ניצחון דחוק); הסיכון העיקרי - תיקו דל שערים אם יפן לא תבקיע מוקדם."
     },
-    "consensus_winner_en": "Japan"
+    "consensus_winner_en": "Japan",
+    "pred": {
+     "h": 0,
+     "a": 1
+    }
    }
   },
   {
@@ -5479,7 +5623,11 @@
      "basis": "models",
      "rationale": "סיכום הבית: 2:1 לאורוגוואי, ~58%. אורוגוואי מועדפת אך פגיעה מול בלוק נמוך; פוטנציאל הפתעה בינוני (תיקו)."
     },
-    "consensus_winner_en": "Uruguay"
+    "consensus_winner_en": "Uruguay",
+    "pred": {
+     "h": 2,
+     "a": 1
+    }
    }
   },
   {
@@ -5533,7 +5681,11 @@
      "basis": "models",
      "rationale": "סיכום הבית: 2:0 לספרד, ~82%; ספרד ניצחה את סעודיה בכל 3 המפגשים ההיסטוריים. הפתעה נמוכה."
     },
-    "consensus_winner_en": "Spain"
+    "consensus_winner_en": "Spain",
+    "pred": {
+     "h": 2,
+     "a": 0
+    }
    }
   },
   {
@@ -5587,7 +5739,11 @@
      "basis": "models",
      "rationale": "ניצחון בלגי במשחק דל יותר מהמפגש מול מצרים; הסיכון הוא 0:0 ממושך מול קשיחות איראנית."
     },
-    "consensus_winner_en": "Belgium"
+    "consensus_winner_en": "Belgium",
+    "pred": {
+     "h": 2,
+     "a": 0
+    }
    }
   },
   {
@@ -5641,7 +5797,11 @@
      "basis": "models",
      "rationale": "מצרים עדיפה כמעט בכל פרמטר אך נדרשת ליזום - לא אזור הנוחות שלה; משחק חובה לעלייה."
     },
-    "consensus_winner_en": "Egypt"
+    "consensus_winner_en": "Egypt",
+    "pred": {
+     "h": 0,
+     "a": 1
+    }
    }
   },
   {
@@ -5695,7 +5855,11 @@
      "basis": "models",
      "rationale": "שני המודלים מזהים בזה את המשחק המכריע למקום השני; כל תוצאה אפשרית ('משחק מטבע')."
     },
-    "consensus_winner_en": "DRAW"
+    "consensus_winner_en": "DRAW",
+    "pred": {
+     "h": 1,
+     "a": 1
+    }
    }
   },
   {
@@ -5749,7 +5913,11 @@
      "basis": "models",
      "rationale": "המשחק הבטוח ביותר בבית; פוטנציאל הפתעה נמוך מאוד (לכל היותר תיקו דל שערים)."
     },
-    "consensus_winner_en": "France"
+    "consensus_winner_en": "France",
+    "pred": {
+     "h": 3,
+     "a": 0
+    }
    }
   },
   {
@@ -5809,7 +5977,11 @@
      "basis": "models",
      "rationale": "ניצחון ארגנטינאי צמוד; זוהה אחיד כמשחק עם פוטנציאל ההפתעה הגבוה ביותר בבית."
     },
-    "consensus_winner_en": "Argentina"
+    "consensus_winner_en": "Argentina",
+    "pred": {
+     "h": 2,
+     "a": 1
+    }
    }
   },
   {
@@ -5869,7 +6041,11 @@
      "basis": "models",
      "rationale": "אלג'יריה מועדפת קלות (46%-52%) אך תיקו סביר מאוד; המשחק עם הסטייה הגדולה ביותר וההזדמנות העיקרית של ירדן."
     },
-    "consensus_winner_en": "Algeria"
+    "consensus_winner_en": "Algeria",
+    "pred": {
+     "h": 1,
+     "a": 2
+    }
    }
   },
   {
@@ -5923,7 +6099,11 @@
      "basis": "models",
      "rationale": "הסכמה מלאה; מהירות סמניו/נואמה עלולה לייצר רגע אך פער האיכות גדול."
     },
-    "consensus_winner_en": "England"
+    "consensus_winner_en": "England",
+    "pred": {
+     "h": 2,
+     "a": 0
+    }
    }
   },
   {
@@ -5977,7 +6157,11 @@
      "basis": "models",
      "rationale": "ניצחון קרואטי צפוי; הסיכון לקרואטיה הוא עקרות מול בלוק נמוך (תיקו אפשרי)."
     },
-    "consensus_winner_en": "Croatia"
+    "consensus_winner_en": "Croatia",
+    "pred": {
+     "h": 0,
+     "a": 1
+    }
    }
   },
   {
@@ -6031,7 +6215,11 @@
      "basis": "models",
      "rationale": "שני המודלים חוזים ניצחון פורטוגל ברור (2:0/2:1); פוטנציאל הפתעה נמוך."
     },
-    "consensus_winner_en": "Portugal"
+    "consensus_winner_en": "Portugal",
+    "pred": {
+     "h": 2,
+     "a": 0
+    }
    }
   },
   {
@@ -6085,7 +6273,11 @@
      "basis": "models",
      "rationale": "המשחק עם פוטנציאל ההפתעה הגבוה ביותר בבית; שני המודלים נוטים לקולומביה אך מסמנים תיקו 1:1 כתרחיש ריאלי מאוד מול הפיזיות של קונגו."
     },
-    "consensus_winner_en": null
+    "consensus_winner_en": null,
+    "pred": {
+     "h": 1,
+     "a": 1
+    }
    }
   },
   {
@@ -6139,7 +6331,11 @@
      "basis": "models",
      "rationale": "פער איכות וקונצנזוס רחב על המנצחת; הוויכוח על גובה הניצחון בלבד. משתנים: רוטציה אפשרית של ברזיל וחום מיאמי (השפעתו שנויה במחלוקת בין המודלים)."
     },
-    "consensus_winner_en": "Brazil"
+    "consensus_winner_en": "Brazil",
+    "pred": {
+     "h": 0,
+     "a": 2
+    }
    }
   },
   {
@@ -6193,7 +6389,11 @@
      "basis": "models",
      "rationale": "קונצנזוס רחב; המאצ'אפ הכי לא מתאים להאיטי (מרוקו מצוינת במצבים נייחים - חולשת האיטי). גורם מכריע: מצב הטבלה ורוטציה אפשרית."
     },
-    "consensus_winner_en": "Morocco"
+    "consensus_winner_en": "Morocco",
+    "pred": {
+     "h": 2,
+     "a": 0
+    }
    }
   },
   {
@@ -6247,7 +6447,11 @@
      "basis": "models",
      "rationale": "מכריע בית פוטנציאלי התלוי במצב הטבלה; שני המודלים נתנו 1:1, עם פוטנציאל הפתעה ביתית קנדית."
     },
-    "consensus_winner_en": "DRAW"
+    "consensus_winner_en": "DRAW",
+    "pred": {
+     "h": 1,
+     "a": 1
+    }
    }
   },
   {
@@ -6301,7 +6505,11 @@
      "basis": "models",
      "rationale": "המשחק עם אי-הוודאות הגדולה בבית: מסמכי בוסניה צופים ניצחון בוסני, מסמכי קטאר צופים 1:1 — לא ניתן להכריע."
     },
-    "consensus_winner_en": null
+    "consensus_winner_en": null,
+    "pred": {
+     "h": 1,
+     "a": 1
+    }
    }
   },
   {
@@ -6355,7 +6563,11 @@
      "basis": "models",
      "rationale": "מקסיקו עדיפה אך הפער קטן; צ'כיה מסוכנת במצב נייח, במיוחד אם למקסיקו אין עוד על מה לשחק."
     },
-    "consensus_winner_en": null
+    "consensus_winner_en": null,
+    "pred": {
+     "h": 1,
+     "a": 2
+    }
    }
   },
   {
@@ -6409,7 +6621,11 @@
      "basis": "models",
      "rationale": "קוריאה עדיפה אך לא יציבה; חום מונטריי ומצב הטבלה עשויים להאט קצב."
     },
-    "consensus_winner_en": "South Korea"
+    "consensus_winner_en": "South Korea",
+    "pred": {
+     "h": 1,
+     "a": 2
+    }
    }
   },
   {
@@ -6463,7 +6679,11 @@
      "basis": "models",
      "rationale": "חוף השנהב עדיפה, אך דינמיקת מחזור שלישי ולחץ טבלה מגבירים אי-ודאות; הסיכוי הריאלי הגדול ביותר לנקודה לקוראסאו (גם עם חזרת לוקדיה)."
     },
-    "consensus_winner_en": "Ivory Coast"
+    "consensus_winner_en": "Ivory Coast",
+    "pred": {
+     "h": 1,
+     "a": 2
+    }
    }
   },
   {
@@ -6517,7 +6737,11 @@
      "basis": "models",
      "rationale": "המשחק עם פוטנציאל ההפתעה הגבוה בבית; אם אקוודור מגיעה עם 4 נקודות ואין צורך לנצח, תיקו 'נוח' לשני הצדדים הוא תרחיש סביר מאוד."
     },
-    "consensus_winner_en": "DRAW"
+    "consensus_winner_en": "DRAW",
+    "pred": {
+     "h": 1,
+     "a": 1
+    }
    }
   },
   {
@@ -6571,7 +6795,11 @@
      "basis": "models",
      "rationale": "המשחק המכריע על המקום השני; שני המודלים צופים 1-1 עם נטייה ליפן, אך גבולי ותלוי-טבלה. פוטנציאל הפתעה בינוני-גבוה."
     },
-    "consensus_winner_en": null
+    "consensus_winner_en": null,
+    "pred": {
+     "h": 1,
+     "a": 1
+    }
    }
   },
   {
@@ -6625,7 +6853,11 @@
      "basis": "models",
      "rationale": "הסכמה על 0-2 להולנד; הפער האיכותי הגדול בבית, עם סיכון תיקו אם הולנד כבר הבטיחה מקום ראשון ותבצע רוטציה."
     },
-    "consensus_winner_en": "Netherlands"
+    "consensus_winner_en": "Netherlands",
+    "pred": {
+     "h": 0,
+     "a": 2
+    }
    }
   },
   {
@@ -6679,7 +6911,11 @@
      "basis": "models",
      "rationale": "המשחק שמכריע את ראש הבית ובעל פוטנציאל ההפתעה הגבוה ביותר; פיזור הסתברויות כמעט שווה, תלות במצב הטבלה ובניהול עומסים."
     },
-    "consensus_winner_en": null
+    "consensus_winner_en": null,
+    "pred": {
+     "h": 1,
+     "a": 1
+    }
    }
   },
   {
@@ -6733,7 +6969,11 @@
      "basis": "models",
      "rationale": "משחק ההכרעה על המקום השלישי; יתרון קל לפראגוואי בכל הניתוחים, אך פרדוקס - היא הפייבוריטית ותיאלץ ליזום מול בלוק. סביר משחק דל-שערים."
     },
-    "consensus_winner_en": null
+    "consensus_winner_en": null,
+    "pred": {
+     "h": 1,
+     "a": 0
+    }
    }
   },
   {
@@ -6787,7 +7027,11 @@
      "basis": "models",
      "rationale": "תחזית לא יציבה - בתוך כל מודל יש סתירה בין מסמך הנבחרות. התוצאה תלויה מאוד אם צרפת כבר מובטחת ותסובב הרכב; פוטנציאל הפתעה בינוני-גבוה."
     },
-    "consensus_winner_en": null
+    "consensus_winner_en": null,
+    "pred": {
+     "h": 1,
+     "a": 1
+    }
    }
   },
   {
@@ -6841,7 +7085,11 @@
      "basis": "models",
      "rationale": "ניצחון סנגל צפוי; זה הסיכוי הריאלי היחיד של עיראק לנקודה, בעיקר אם סנגל כבר מובטחת ומסבבת."
     },
-    "consensus_winner_en": "Senegal"
+    "consensus_winner_en": "Senegal",
+    "pred": {
+     "h": 2,
+     "a": 1
+    }
    }
   },
   {
@@ -6895,7 +7143,11 @@
      "basis": "models",
      "rationale": "תוצאת המפתח שתכריע את המקום השני/השלישי; המשחק הכי שקול בבית, יוכרע בפרט אחד או בכדור נייח."
     },
-    "consensus_winner_en": "DRAW"
+    "consensus_winner_en": "DRAW",
+    "pred": {
+     "h": 1,
+     "a": 1
+    }
    }
   },
   {
@@ -6949,7 +7201,11 @@
      "basis": "models",
      "rationale": "פער איכות גדול; הגורם המשתנה היחיד הוא רוטציה בלגית במחזור השלישי שעלולה להקטין פערים."
     },
-    "consensus_winner_en": "Belgium"
+    "consensus_winner_en": "Belgium",
+    "pred": {
+     "h": 0,
+     "a": 2
+    }
    }
   },
   {
@@ -7003,7 +7259,11 @@
      "basis": "models",
      "rationale": "סיכום הבית: 'גמר' מקום שלישי מאוזן, הכרעה צרה (~35% לכל צד), פוטנציאל הפתעה גבוה מעצם האיזון. ChatGPT (סיכום) רואה את סעודיה מעט מעל."
     },
-    "consensus_winner_en": "DRAW"
+    "consensus_winner_en": "DRAW",
+    "pred": {
+     "h": 1,
+     "a": 1
+    }
    }
   },
   {
@@ -7057,7 +7317,11 @@
      "basis": "models",
      "rationale": "סיכום הבית: 1:1, ספרד ~45%. המשחק המכריע על ראשות הבית; ספרד עשויה לסובב אם כבר הבטיחה מעבר - פתח להפתעה."
     },
-    "consensus_winner_en": "Spain"
+    "consensus_winner_en": "Spain",
+    "pred": {
+     "h": 1,
+     "a": 1
+    }
    }
   },
   {
@@ -7111,7 +7375,11 @@
      "basis": "models",
      "rationale": "ניצחון אנגלי כמעט ודאי; ההפתעה היחידה האפשרית - תיקו אם אנגליה מסובבת הרכב רחב."
     },
-    "consensus_winner_en": "England"
+    "consensus_winner_en": "England",
+    "pred": {
+     "h": 0,
+     "a": 2
+    }
    }
   },
   {
@@ -7165,7 +7433,11 @@
      "basis": "models",
      "rationale": "משחק שעלול להיות מכריע לשני הצדדים; פוטנציאל הפתעה גבוה אם לגאנה יש מה לשחק עליו."
     },
-    "consensus_winner_en": null
+    "consensus_winner_en": null,
+    "pred": {
+     "h": 2,
+     "a": 1
+    }
    }
   },
   {
@@ -7225,7 +7497,11 @@
      "basis": "models",
      "rationale": "המשחק המכריע על המקום השני - שקול ופתוח; פוטנציאל הפתעה גבוה מאוד, יתרון קל לאוסטריה ביציבות והפרש שערים."
     },
-    "consensus_winner_en": null
+    "consensus_winner_en": null,
+    "pred": {
+     "h": 1,
+     "a": 1
+    }
    }
   },
   {
@@ -7285,7 +7561,11 @@
      "basis": "models",
      "rationale": "ניצחון ארגנטינה ברור (75%-85%); פוטנציאל הפתעה נמוך, תלוי בעיקר ברוטציה ארגנטינאית."
     },
-    "consensus_winner_en": "Argentina"
+    "consensus_winner_en": "Argentina",
+    "pred": {
+     "h": 0,
+     "a": 3
+    }
    }
   },
   {
@@ -7339,7 +7619,11 @@
      "basis": "models",
      "rationale": "קונצנזוס לתיקו 1:1; המשחק החשוב בבית - מכריע את הראשות ואת מסלול הנוקאאוט, וייתכן שינוהל אם שתיהן כבר מעפילות."
     },
-    "consensus_winner_en": "DRAW"
+    "consensus_winner_en": "DRAW",
+    "pred": {
+     "h": 1,
+     "a": 1
+    }
    }
   },
   {
@@ -7393,7 +7677,11 @@
      "basis": "models",
      "rationale": "תוצאת המפתח שמכריעה את המקום השלישי; קונצנזוס נוטה לקונגו אך המשחק שקול מאוד ותיקו/ניצחון אוזבקי הם תרחישים פתוחים."
     },
-    "consensus_winner_en": null
+    "consensus_winner_en": null,
+    "pred": {
+     "h": 1,
+     "a": 0
+    }
    }
   },
   {

@@ -229,6 +229,7 @@ function stronger(a,b){
 // returns {h,a,kind} for a match given resolved participants; kind: result|pred|ai|null
 function aiSeed(match){
   if(match.stage==='group'){
+    const p=match.ai&&match.ai.pred;if(p&&p.h!=null&&p.a!=null)return {h:p.h,a:p.a,kind:'ai'};
     const c=match.ai&&match.ai.consensus;
     if(!c)return null;
     let sc=parseScore(c.score);
@@ -413,7 +414,7 @@ function renderDash(){
   let h='';
   h+='<div class="card"><div class="hd">🏆 קונצנזוס מודלי ה-AI — כל הטורניר</div><div class="bd hero">';
   if(cons.champion_likely)h+='<div class="big">אלופה סבירה: <b>'+esc(cons.champion_likely)+'</b></div>';
-  if(cons.finalists_likely&&cons.finalists_likely.length)h+='<div class="tiny">גמר צפוי: '+cons.finalists_likely.map(esc).join(' — ')+'</div>';
+  if(cons.finalists_likely&&cons.finalists_likely.length)h+='<div class="tiny">גמר צפוי (תחזית-על מוצהרת; בעץ הנוקאאוט ייתכן שונה לפי ההגרלה): '+cons.finalists_likely.map(esc).join(' — ')+'</div>';
   if(cons.top_contenders&&cons.top_contenders.length){h+='<div class="chips">'+cons.top_contenders.map(t=>'<span class="chip">'+esc(t)+'</span>').join('')+'</div>'}
   if(cons.main_dark_horses&&cons.main_dark_horses.length)h+='<div class="tiny" style="margin-top:6px">🐎 סוסים שחורים: '+cons.main_dark_horses.map(esc).join(', ')+'</div>';
   // per-model champion
