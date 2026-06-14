@@ -4,7 +4,7 @@
     "tournament": "מונדיאל 2026",
     "source_schedule": "Wikipedia (2026 FIFA World Cup)",
     "source_analysis": "Google Drive — מונדיאל 2026 (132 מסמכי AI)",
-    "last_results_update": "2026-06-13"
+    "last_results_update": "2026-06-14"
   },
   "teams": {
     "Mexico": {
@@ -3831,7 +3831,21 @@
       },
       "venue": "Gillette Stadium",
       "city": "Foxborough",
-      "result": null,
+      "result": {
+        "h": 0,
+        "a": 1,
+        "events": [
+          {
+            "min": "28",
+            "type": "goal",
+            "team": "away",
+            "player": "McGinn"
+          }
+        ],
+        "played_on": "2026-06-13",
+        "played_time": "21:00",
+        "notes": "כרטיסים/קרנות/בישולים לא נמצאו במקור החינמי (Wikipedia summary)"
+      },
       "ai": {
         "models": {
           "Claude": {
@@ -3889,7 +3903,27 @@
       },
       "venue": "BC Place",
       "city": "Vancouver",
-      "result": null,
+      "result": {
+        "h": 2,
+        "a": 0,
+        "events": [
+          {
+            "min": "27",
+            "type": "goal",
+            "team": "home",
+            "player": "Irankunda"
+          },
+          {
+            "min": "75",
+            "type": "goal",
+            "team": "home",
+            "player": "Metcalfe"
+          }
+        ],
+        "played_on": "2026-06-13",
+        "played_time": "21:00",
+        "notes": "כרטיסים/קרנות/בישולים לא נמצאו במקור החינמי (Wikipedia summary)"
+      },
       "ai": {
         "models": {
           "Claude": {
@@ -3947,7 +3981,27 @@
       },
       "venue": "MetLife Stadium",
       "city": "East Rutherford",
-      "result": null,
+      "result": {
+        "h": 1,
+        "a": 1,
+        "events": [
+          {
+            "min": "21",
+            "type": "goal",
+            "team": "away",
+            "player": "Saibari"
+          },
+          {
+            "min": "32",
+            "type": "goal",
+            "team": "home",
+            "player": "Vinícius"
+          }
+        ],
+        "played_on": "2026-06-13",
+        "played_time": "18:00",
+        "notes": "כרטיסים/קרנות/בישולים לא נמצאו במקור החינמי (Wikipedia summary)"
+      },
       "ai": {
         "models": {
           "Claude": {
@@ -4005,7 +4059,27 @@
       },
       "venue": "Levi's Stadium",
       "city": "Santa Clara",
-      "result": null,
+      "result": {
+        "h": 1,
+        "a": 1,
+        "events": [
+          {
+            "min": "17",
+            "type": "pen",
+            "team": "away",
+            "player": "Embolo"
+          },
+          {
+            "min": "90+4",
+            "type": "og",
+            "team": "home",
+            "player": "Muheim"
+          }
+        ],
+        "played_on": "2026-06-13",
+        "played_time": "12:00",
+        "notes": "שער הבית הוא שער עצמי של מוהיים (שוויץ); שער שוויץ מפנדל. כרטיסים/קרנות/בישולים לא נמצאו במקור החינמי"
+      },
       "ai": {
         "models": {
           "Claude": {
