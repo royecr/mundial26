@@ -4,7 +4,7 @@
     "tournament": "מונדיאל 2026",
     "source_schedule": "Wikipedia (2026 FIFA World Cup)",
     "source_analysis": "Google Drive — מונדיאל 2026 (132 מסמכי AI)",
-    "last_results_update": "2026-06-14"
+    "last_results_update": "2026-06-15"
   },
   "teams": {
     "Mexico": {
@@ -4137,7 +4137,21 @@
       },
       "venue": "Lincoln Financial Field",
       "city": "Philadelphia",
-      "result": null,
+      "result": {
+        "h": 1,
+        "a": 0,
+        "events": [
+          {
+            "min": "90",
+            "type": "goal",
+            "team": "home",
+            "player": "Diallo"
+          }
+        ],
+        "played_on": "2026-06-14",
+        "played_time": "19:00",
+        "notes": "מקור: Wikipedia (2026 FIFA World Cup). כובשים ודקות מתוך תיבת המשחק. כרטיסים/קרנות/בישולים אינם זמינים בדף הסיכום החינמי — הושארו ריקים."
+      },
       "ai": {
         "models": {
           "Claude": {
@@ -4195,7 +4209,63 @@
       },
       "venue": "NRG Stadium",
       "city": "Houston",
-      "result": null,
+      "result": {
+        "h": 7,
+        "a": 1,
+        "events": [
+          {
+            "min": "6",
+            "type": "goal",
+            "team": "home",
+            "player": "Nmecha"
+          },
+          {
+            "min": "21",
+            "type": "goal",
+            "team": "away",
+            "player": "Comenencia"
+          },
+          {
+            "min": "38",
+            "type": "goal",
+            "team": "home",
+            "player": "Schlotterbeck"
+          },
+          {
+            "min": "45+5",
+            "type": "goal",
+            "team": "home",
+            "player": "Havertz (pen.)"
+          },
+          {
+            "min": "47",
+            "type": "goal",
+            "team": "home",
+            "player": "Musiala"
+          },
+          {
+            "min": "68",
+            "type": "goal",
+            "team": "home",
+            "player": "Brown"
+          },
+          {
+            "min": "78",
+            "type": "goal",
+            "team": "home",
+            "player": "Undav"
+          },
+          {
+            "min": "88",
+            "type": "goal",
+            "team": "home",
+            "player": "Havertz"
+          }
+        ],
+        "played_on": "2026-06-14",
+        "played_time": "12:00",
+        "notes": "מקור: Wikipedia (2026 FIFA World Cup). כובשים ודקות מתוך תיבת המשחק. כרטיסים/קרנות/בישולים אינם זמינים בדף הסיכום החינמי — הושארו ריקים."
+      },
       "ai": {
         "models": {
           "Claude": {
@@ -4253,7 +4323,39 @@
       },
       "venue": "AT&T Stadium",
       "city": "Arlington",
-      "result": null,
+      "result": {
+        "h": 2,
+        "a": 2,
+        "events": [
+          {
+            "min": "50",
+            "type": "goal",
+            "team": "home",
+            "player": "Van Dijk"
+          },
+          {
+            "min": "57",
+            "type": "goal",
+            "team": "away",
+            "player": "Nakamura"
+          },
+          {
+            "min": "64",
+            "type": "goal",
+            "team": "home",
+            "player": "Summerville"
+          },
+          {
+            "min": "88",
+            "type": "goal",
+            "team": "away",
+            "player": "Kamada"
+          }
+        ],
+        "played_on": "2026-06-14",
+        "played_time": "15:00",
+        "notes": "מקור: Wikipedia (2026 FIFA World Cup). כובשים ודקות מתוך תיבת המשחק. כרטיסים/קרנות/בישולים אינם זמינים בדף הסיכום החינמי — הושארו ריקים."
+      },
       "ai": {
         "models": {
           "Claude": {
@@ -4311,7 +4413,51 @@
       },
       "venue": "Estadio BBVA",
       "city": "Guadalupe",
-      "result": null,
+      "result": {
+        "h": 5,
+        "a": 1,
+        "events": [
+          {
+            "min": "7",
+            "type": "goal",
+            "team": "home",
+            "player": "Ayari"
+          },
+          {
+            "min": "30",
+            "type": "goal",
+            "team": "home",
+            "player": "Isak"
+          },
+          {
+            "min": "43",
+            "type": "goal",
+            "team": "away",
+            "player": "Rekik"
+          },
+          {
+            "min": "59",
+            "type": "goal",
+            "team": "home",
+            "player": "Gyökeres"
+          },
+          {
+            "min": "84",
+            "type": "goal",
+            "team": "home",
+            "player": "Svanberg"
+          },
+          {
+            "min": "90+6",
+            "type": "goal",
+            "team": "home",
+            "player": "Ayari"
+          }
+        ],
+        "played_on": "2026-06-14",
+        "played_time": "20:00",
+        "notes": "מקור: Wikipedia (2026 FIFA World Cup). כובשים ודקות מתוך תיבת המשחק. כרטיסים/קרנות/בישולים אינם זמינים בדף הסיכום החינמי — הושארו ריקים."
+      },
       "ai": {
         "models": {
           "Claude": {
