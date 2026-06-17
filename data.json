@@ -4,7 +4,7 @@
   "tournament": "מונדיאל 2026",
   "source_schedule": "Wikipedia (2026 FIFA World Cup)",
   "source_analysis": "Google Drive — מונדיאל 2026 (132 מסמכי AI)",
-  "last_results_update": "2026-06-16"
+  "last_results_update": "2026-06-17"
  },
  "teams": {
   "Mexico": {
@@ -4826,7 +4826,39 @@
    },
    "venue": "MetLife Stadium",
    "city": "East Rutherford",
-   "result": null,
+   "result": {
+    "h": 3,
+    "a": 1,
+    "events": [
+     {
+      "min": "66",
+      "type": "goal",
+      "team": "home",
+      "player": "Mbappé"
+     },
+     {
+      "min": "82",
+      "type": "goal",
+      "team": "home",
+      "player": "Barcola"
+     },
+     {
+      "min": "90+5",
+      "type": "goal",
+      "team": "away",
+      "player": "Mbaye"
+     },
+     {
+      "min": "90+6",
+      "type": "goal",
+      "team": "home",
+      "player": "Mbappé"
+     }
+    ],
+    "played_on": "2026-06-16",
+    "played_time": "15:00",
+    "notes": "מקור: Wikipedia (2026 FIFA World Cup). קהל: 80,545. שופט: Alireza Faghani (אוסטרליה). כרטיסים/קרנות/בישולים בדקה מדויקת אינם זמינים בדף הסיכום החינמי — הושארו ריקים."
+   },
    "ai": {
     "models": {
      "Claude": {
@@ -4884,7 +4916,45 @@
    },
    "venue": "Gillette Stadium",
    "city": "Foxborough",
-   "result": null,
+   "result": {
+    "h": 1,
+    "a": 4,
+    "events": [
+     {
+      "min": "29",
+      "type": "goal",
+      "team": "away",
+      "player": "Haaland"
+     },
+     {
+      "min": "39",
+      "type": "goal",
+      "team": "home",
+      "player": "Hussein"
+     },
+     {
+      "min": "43",
+      "type": "goal",
+      "team": "away",
+      "player": "Haaland"
+     },
+     {
+      "min": "76",
+      "type": "goal",
+      "team": "away",
+      "player": "Østigård"
+     },
+     {
+      "min": "90+6",
+      "type": "og",
+      "team": "away",
+      "player": "Hussein (שער עצמי של עיראק)"
+     }
+    ],
+    "played_on": "2026-06-16",
+    "played_time": "18:00",
+    "notes": "מקור: Wikipedia (2026 FIFA World Cup). קהל: 63,106. שופט: Pierre Atcho (גבון). שער ה-1-4 הוא שער עצמי של חוסיין (עיראק). כרטיסים/קרנות/בישולים בדקה מדויקת אינם זמינים בדף הסיכום החינמי — הושארו ריקים."
+   },
    "ai": {
     "models": {
      "Claude": {
@@ -4942,7 +5012,33 @@
    },
    "venue": "Arrowhead Stadium",
    "city": "Kansas City",
-   "result": null,
+   "result": {
+    "h": 3,
+    "a": 0,
+    "events": [
+     {
+      "min": "17",
+      "type": "goal",
+      "team": "home",
+      "player": "Messi"
+     },
+     {
+      "min": "60",
+      "type": "goal",
+      "team": "home",
+      "player": "Messi"
+     },
+     {
+      "min": "76",
+      "type": "goal",
+      "team": "home",
+      "player": "Messi"
+     }
+    ],
+    "played_on": "2026-06-16",
+    "played_time": "20:00",
+    "notes": "מקור: Wikipedia (2026 FIFA World Cup). קהל: 69,045. שופט: Szymon Marciniak (פולין). שלושער של מסי. כרטיסים/קרנות/בישולים בדקה מדויקת אינם זמינים בדף הסיכום החינמי — הושארו ריקים."
+   },
    "ai": {
     "models": {
      "Claude": {
@@ -5006,7 +5102,39 @@
    },
    "venue": "Levi's Stadium",
    "city": "Santa Clara",
-   "result": null,
+   "result": {
+    "h": 3,
+    "a": 1,
+    "events": [
+     {
+      "min": "21",
+      "type": "goal",
+      "team": "home",
+      "player": "Schmid"
+     },
+     {
+      "min": "50",
+      "type": "goal",
+      "team": "away",
+      "player": "Olwan"
+     },
+     {
+      "min": "77",
+      "type": "og",
+      "team": "home",
+      "player": "Al-Arab (שער עצמי של ירדן)"
+     },
+     {
+      "min": "90+12",
+      "type": "pen",
+      "team": "home",
+      "player": "Arnautović"
+     }
+    ],
+    "played_on": "2026-06-16",
+    "played_time": "21:00",
+    "notes": "מקור: Wikipedia (2026 FIFA World Cup). קהל: 68,527. שופט: Dahane Beida (מאוריטניה). שער ה-2 לאוסטריה הוא שער עצמי של אל-ערב (ירדן); שער ה-3 מפנדל. כרטיסים/קרנות/בישולים בדקה מדויקת אינם זמינים בדף הסיכום החינמי — הושארו ריקים."
+   },
    "ai": {
     "models": {
      "Claude": {
