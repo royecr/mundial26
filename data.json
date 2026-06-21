@@ -4,7 +4,7 @@
     "tournament": "מונדיאל 2026",
     "source_schedule": "Wikipedia (2026 FIFA World Cup)",
     "source_analysis": "Google Drive — מונדיאל 2026 (132 מסמכי AI)",
-    "last_results_update": "2026-06-20"
+    "last_results_update": "2026-06-21"
   },
   "teams": {
     "Mexico": {
@@ -6194,7 +6194,33 @@
       },
       "venue": "BMO Field",
       "city": "Toronto",
-      "result": null,
+      "result": {
+        "h": 2,
+        "a": 1,
+        "events": [
+          {
+            "min": "30",
+            "type": "goal",
+            "team": "away",
+            "player": "Kessié"
+          },
+          {
+            "min": "68",
+            "type": "goal",
+            "team": "home",
+            "player": "Undav"
+          },
+          {
+            "min": "90+4",
+            "type": "goal",
+            "team": "home",
+            "player": "Undav"
+          }
+        ],
+        "played_on": "2026-06-20",
+        "played_time": "16:00",
+        "notes": "מקור: Wikipedia (2026 FIFA World Cup). כרטיסים/קרנות/בישולים אינם זמינים בדף הסיכום החינמי — הושארו ריקים."
+      },
       "ai": {
         "models": {
           "Claude": {
@@ -6252,7 +6278,14 @@
       },
       "venue": "Arrowhead Stadium",
       "city": "Kansas City",
-      "result": null,
+      "result": {
+        "h": 0,
+        "a": 0,
+        "events": [],
+        "played_on": "2026-06-20",
+        "played_time": "19:00",
+        "notes": "0:0 — ללא שערים. מקור: Wikipedia (2026 FIFA World Cup). כרטיסים/קרנות/בישולים אינם זמינים בדף הסיכום החינמי — הושארו ריקים."
+      },
       "ai": {
         "models": {
           "Claude": {
@@ -6310,7 +6343,51 @@
       },
       "venue": "NRG Stadium",
       "city": "Houston",
-      "result": null,
+      "result": {
+        "h": 5,
+        "a": 1,
+        "events": [
+          {
+            "min": "5",
+            "type": "goal",
+            "team": "home",
+            "player": "Brobbey"
+          },
+          {
+            "min": "17",
+            "type": "goal",
+            "team": "home",
+            "player": "Brobbey"
+          },
+          {
+            "min": "47",
+            "type": "goal",
+            "team": "home",
+            "player": "Gakpo"
+          },
+          {
+            "min": "54",
+            "type": "goal",
+            "team": "home",
+            "player": "Gakpo"
+          },
+          {
+            "min": "59",
+            "type": "goal",
+            "team": "away",
+            "player": "Elanga"
+          },
+          {
+            "min": "89",
+            "type": "goal",
+            "team": "home",
+            "player": "Summerville"
+          }
+        ],
+        "played_on": "2026-06-20",
+        "played_time": "12:00",
+        "notes": "מקור: Wikipedia (2026 FIFA World Cup). כרטיסים/קרנות/בישולים אינם זמינים בדף הסיכום החינמי — הושארו ריקים."
+      },
       "ai": {
         "models": {
           "Claude": {
@@ -6368,7 +6445,39 @@
       },
       "venue": "Estadio BBVA",
       "city": "Guadalupe",
-      "result": null,
+      "result": {
+        "h": 0,
+        "a": 4,
+        "events": [
+          {
+            "min": "4",
+            "type": "goal",
+            "team": "away",
+            "player": "Kamada"
+          },
+          {
+            "min": "31",
+            "type": "goal",
+            "team": "away",
+            "player": "Ueda"
+          },
+          {
+            "min": "69",
+            "type": "goal",
+            "team": "away",
+            "player": "J. Itō"
+          },
+          {
+            "min": "83",
+            "type": "goal",
+            "team": "away",
+            "player": "Ueda"
+          }
+        ],
+        "played_on": "2026-06-20",
+        "played_time": "22:00",
+        "notes": "מקור: Wikipedia (2026 FIFA World Cup). כרטיסים/קרנות/בישולים אינם זמינים בדף הסיכום החינמי — הושארו ריקים."
+      },
       "ai": {
         "models": {
           "Claude": {
