@@ -4,7 +4,7 @@
   "tournament": "מונדיאל 2026",
   "source_schedule": "Wikipedia (2026 FIFA World Cup)",
   "source_analysis": "Google Drive — מונדיאל 2026 (132 מסמכי AI)",
-  "last_results_update": "2026-06-22"
+  "last_results_update": "2026-06-23"
  },
  "teams": {
   "Mexico": {
@@ -6870,7 +6870,45 @@
    },
    "venue": "MetLife Stadium",
    "city": "East Rutherford",
-   "result": null,
+   "result": {
+    "h": 3,
+    "a": 2,
+    "events": [
+     {
+      "min": "43",
+      "type": "goal",
+      "team": "home",
+      "player": "Pedersen"
+     },
+     {
+      "min": "48",
+      "type": "goal",
+      "team": "home",
+      "player": "Haaland"
+     },
+     {
+      "min": "58",
+      "type": "goal",
+      "team": "home",
+      "player": "Haaland"
+     },
+     {
+      "min": "53",
+      "type": "goal",
+      "team": "away",
+      "player": "I. Sarr"
+     },
+     {
+      "min": "90+3",
+      "type": "goal",
+      "team": "away",
+      "player": "I. Sarr"
+     }
+    ],
+    "played_on": "2026-06-22",
+    "played_time": "20:00",
+    "notes": "שערים בלבד מ-Wikipedia; כרטיסים/קרנות/בישולים לא זמינים בתיבת הסיכום"
+   },
    "ai": {
     "models": {
      "Claude": {
@@ -6928,7 +6966,33 @@
    },
    "venue": "Lincoln Financial Field",
    "city": "Philadelphia",
-   "result": null,
+   "result": {
+    "h": 3,
+    "a": 0,
+    "events": [
+     {
+      "min": "14",
+      "type": "goal",
+      "team": "home",
+      "player": "Mbappé"
+     },
+     {
+      "min": "54",
+      "type": "goal",
+      "team": "home",
+      "player": "Mbappé"
+     },
+     {
+      "min": "66",
+      "type": "goal",
+      "team": "home",
+      "player": "Dembélé"
+     }
+    ],
+    "played_on": "2026-06-22",
+    "played_time": "17:00",
+    "notes": "שערים בלבד מ-Wikipedia; כרטיסים/קרנות/בישולים לא זמינים בתיבת הסיכום"
+   },
    "ai": {
     "models": {
      "Claude": {
@@ -6986,7 +7050,27 @@
    },
    "venue": "AT&T Stadium",
    "city": "Arlington",
-   "result": null,
+   "result": {
+    "h": 2,
+    "a": 0,
+    "events": [
+     {
+      "min": "38",
+      "type": "goal",
+      "team": "home",
+      "player": "Messi"
+     },
+     {
+      "min": "90+5",
+      "type": "goal",
+      "team": "home",
+      "player": "Messi"
+     }
+    ],
+    "played_on": "2026-06-22",
+    "played_time": "12:00",
+    "notes": "שערים בלבד מ-Wikipedia; כרטיסים/קרנות/בישולים לא זמינים בתיבת הסיכום"
+   },
    "ai": {
     "models": {
      "Claude": {
@@ -7050,7 +7134,33 @@
    },
    "venue": "Levi's Stadium",
    "city": "Santa Clara",
-   "result": null,
+   "result": {
+    "h": 1,
+    "a": 2,
+    "events": [
+     {
+      "min": "36",
+      "type": "goal",
+      "team": "home",
+      "player": "Al-Rashdan"
+     },
+     {
+      "min": "69",
+      "type": "goal",
+      "team": "away",
+      "player": "Benbouali"
+     },
+     {
+      "min": "82",
+      "type": "goal",
+      "team": "away",
+      "player": "Gouiri"
+     }
+    ],
+    "played_on": "2026-06-22",
+    "played_time": "20:00",
+    "notes": "שערים בלבד מ-Wikipedia; כרטיסים/קרנות/בישולים לא זמינים בתיבת הסיכום"
+   },
    "ai": {
     "models": {
      "Claude": {
