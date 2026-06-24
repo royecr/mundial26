@@ -4,7 +4,7 @@
   "tournament": "מונדיאל 2026",
   "source_schedule": "Wikipedia (2026 FIFA World Cup)",
   "source_analysis": "Google Drive — מונדיאל 2026 (132 מסמכי AI)",
-  "last_results_update": "2026-06-23"
+  "last_results_update": "2026-06-24"
  },
  "teams": {
   "Mexico": {
@@ -7224,7 +7224,14 @@
    },
    "venue": "Gillette Stadium",
    "city": "Foxborough",
-   "result": null,
+   "result": {
+    "h": 0,
+    "a": 0,
+    "events": [],
+    "played_on": "2026-06-23",
+    "played_time": "16:00",
+    "notes": "מקור: Wikipedia (2026 FIFA World Cup). אצטדיון: Gillette Stadium, Foxborough. קהל: 63,983. שופט: Saíd Martínez (הונדורס). ללא שערים. כרטיסים/קרנות/בישולים אינם זמינים בדף הסיכום החינמי — הושארו ריקים."
+   },
    "ai": {
     "models": {
      "Claude": {
@@ -7282,7 +7289,21 @@
    },
    "venue": "Toronto Stadium",
    "city": "Toronto",
-   "result": null,
+   "result": {
+    "h": 0,
+    "a": 1,
+    "events": [
+     {
+      "min": "54",
+      "type": "goal",
+      "team": "away",
+      "player": "Budimir"
+     }
+    ],
+    "played_on": "2026-06-23",
+    "played_time": "19:00",
+    "notes": "מקור: Wikipedia (2026 FIFA World Cup). אצטדיון: BMO Field, Toronto. קהל: 43,036. שופט: Pierre Atcho (גאבון). כרטיסים/קרנות/בישולים אינם זמינים בדף הסיכום החינמי — הושארו ריקים."
+   },
    "ai": {
     "models": {
      "Claude": {
@@ -7340,7 +7361,45 @@
    },
    "venue": "NRG Stadium",
    "city": "Houston",
-   "result": null,
+   "result": {
+    "h": 5,
+    "a": 0,
+    "events": [
+     {
+      "min": "6",
+      "type": "goal",
+      "team": "home",
+      "player": "Ronaldo"
+     },
+     {
+      "min": "17",
+      "type": "goal",
+      "team": "home",
+      "player": "Mendes"
+     },
+     {
+      "min": "39",
+      "type": "goal",
+      "team": "home",
+      "player": "Ronaldo"
+     },
+     {
+      "min": "60",
+      "type": "og",
+      "team": "home",
+      "player": "Nematov"
+     },
+     {
+      "min": "87",
+      "type": "goal",
+      "team": "home",
+      "player": "Leão"
+     }
+    ],
+    "played_on": "2026-06-23",
+    "played_time": "12:00",
+    "notes": "מקור: Wikipedia (2026 FIFA World Cup). אצטדיון: NRG Stadium, Houston. קהל: 68,777. שופט: Jalal Jayed (מרוקו). שער עצמי של נמטוב (אוזבקיסטן) בדקה 60. כרטיסים/קרנות/בישולים אינם זמינים בדף הסיכום החינמי — הושארו ריקים."
+   },
    "ai": {
     "models": {
      "Claude": {
@@ -7398,7 +7457,21 @@
    },
    "venue": "Estadio Akron",
    "city": "Zapopan",
-   "result": null,
+   "result": {
+    "h": 1,
+    "a": 0,
+    "events": [
+     {
+      "min": "76",
+      "type": "goal",
+      "team": "home",
+      "player": "Muñoz"
+     }
+    ],
+    "played_on": "2026-06-23",
+    "played_time": "20:00",
+    "notes": "מקור: Wikipedia (2026 FIFA World Cup). אצטדיון: Estadio Akron, Zapopan. קהל: 45,358. שופט: Maurizio Mariani (איטליה). כרטיסים/קרנות/בישולים אינם זמינים בדף הסיכום החינמי — הושארו ריקים."
+   },
    "ai": {
     "models": {
      "Claude": {
