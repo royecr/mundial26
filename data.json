@@ -4,7 +4,7 @@
   "tournament": "מונדיאל 2026",
   "source_schedule": "Wikipedia (2026 FIFA World Cup)",
   "source_analysis": "Google Drive — מונדיאל 2026 (132 מסמכי AI)",
-  "last_results_update": "2026-06-24"
+  "last_results_update": "2026-06-26"
  },
  "teams": {
   "Mexico": {
@@ -7529,7 +7529,33 @@
    },
    "venue": "Hard Rock Stadium",
    "city": "Miami Gardens",
-   "result": null,
+   "result": {
+    "h": 0,
+    "a": 3,
+    "events": [
+     {
+      "min": "7",
+      "type": "goal",
+      "team": "away",
+      "player": "Vinícius"
+     },
+     {
+      "min": "45+3",
+      "type": "goal",
+      "team": "away",
+      "player": "Vinícius"
+     },
+     {
+      "min": "60",
+      "type": "goal",
+      "team": "away",
+      "player": "Cunha"
+     }
+    ],
+    "played_on": "2026-06-24",
+    "played_time": "18:00",
+    "notes": "ויקיפדיה מספקת תוצאה וכובשים בלבד; כרטיסים, קרנות, בישולים וחילופים אינם זמינים במקור החינמי."
+   },
    "ai": {
     "models": {
      "Claude": {
@@ -7587,7 +7613,51 @@
    },
    "venue": "Mercedes-Benz Stadium",
    "city": "Atlanta",
-   "result": null,
+   "result": {
+    "h": 4,
+    "a": 2,
+    "events": [
+     {
+      "min": "39",
+      "type": "goal",
+      "team": "home",
+      "player": "Hakimi"
+     },
+     {
+      "min": "45+1",
+      "type": "goal",
+      "team": "home",
+      "player": "Saibari"
+     },
+     {
+      "min": "78",
+      "type": "goal",
+      "team": "home",
+      "player": "Rahimi"
+     },
+     {
+      "min": "89",
+      "type": "goal",
+      "team": "home",
+      "player": "Yassine"
+     },
+     {
+      "min": "10",
+      "type": "og",
+      "team": "away",
+      "player": "Bounou"
+     },
+     {
+      "min": "43",
+      "type": "goal",
+      "team": "away",
+      "player": "Isidor"
+     }
+    ],
+    "played_on": "2026-06-24",
+    "played_time": "18:00",
+    "notes": "ויקיפדיה מספקת תוצאה וכובשים בלבד; כרטיסים, קרנות, בישולים וחילופים אינם זמינים במקור החינמי."
+   },
    "ai": {
     "models": {
      "Claude": {
@@ -7645,7 +7715,33 @@
    },
    "venue": "BC Place",
    "city": "Vancouver",
-   "result": null,
+   "result": {
+    "h": 2,
+    "a": 1,
+    "events": [
+     {
+      "min": "46",
+      "type": "goal",
+      "team": "home",
+      "player": "Vargas"
+     },
+     {
+      "min": "57",
+      "type": "goal",
+      "team": "home",
+      "player": "Manzambi"
+     },
+     {
+      "min": "76",
+      "type": "goal",
+      "team": "away",
+      "player": "P. David"
+     }
+    ],
+    "played_on": "2026-06-24",
+    "played_time": "12:00",
+    "notes": "ויקיפדיה מספקת תוצאה וכובשים בלבד; כרטיסים, קרנות, בישולים וחילופים אינם זמינים במקור החינמי."
+   },
    "ai": {
     "models": {
      "Claude": {
@@ -7703,7 +7799,39 @@
    },
    "venue": "Lumen Field",
    "city": "Seattle",
-   "result": null,
+   "result": {
+    "h": 3,
+    "a": 1,
+    "events": [
+     {
+      "min": "29",
+      "type": "goal",
+      "team": "home",
+      "player": "Alajbegović"
+     },
+     {
+      "min": "34",
+      "type": "og",
+      "team": "home",
+      "player": "Abunada"
+     },
+     {
+      "min": "80",
+      "type": "goal",
+      "team": "home",
+      "player": "Mahmić"
+     },
+     {
+      "min": "42",
+      "type": "goal",
+      "team": "away",
+      "player": "Al-Haydos"
+     }
+    ],
+    "played_on": "2026-06-24",
+    "played_time": "12:00",
+    "notes": "ויקיפדיה מספקת תוצאה וכובשים בלבד; כרטיסים, קרנות, בישולים וחילופים אינם זמינים במקור החינמי."
+   },
    "ai": {
     "models": {
      "Claude": {
@@ -7761,7 +7889,33 @@
    },
    "venue": "Estadio Azteca",
    "city": "Mexico City",
-   "result": null,
+   "result": {
+    "h": 0,
+    "a": 3,
+    "events": [
+     {
+      "min": "55",
+      "type": "goal",
+      "team": "away",
+      "player": "M. Chávez"
+     },
+     {
+      "min": "61",
+      "type": "goal",
+      "team": "away",
+      "player": "Quiñones"
+     },
+     {
+      "min": "90+4",
+      "type": "goal",
+      "team": "away",
+      "player": "Fidalgo"
+     }
+    ],
+    "played_on": "2026-06-24",
+    "played_time": "19:00",
+    "notes": "ויקיפדיה מספקת תוצאה וכובשים בלבד; כרטיסים, קרנות, בישולים וחילופים אינם זמינים במקור החינמי."
+   },
    "ai": {
     "models": {
      "Claude": {
@@ -7819,7 +7973,21 @@
    },
    "venue": "Estadio BBVA",
    "city": "Guadalupe",
-   "result": null,
+   "result": {
+    "h": 1,
+    "a": 0,
+    "events": [
+     {
+      "min": "63",
+      "type": "goal",
+      "team": "home",
+      "player": "Maseko"
+     }
+    ],
+    "played_on": "2026-06-24",
+    "played_time": "19:00",
+    "notes": "ויקיפדיה מספקת תוצאה וכובשים בלבד; כרטיסים, קרנות, בישולים וחילופים אינם זמינים במקור החינמי."
+   },
    "ai": {
     "models": {
      "Claude": {
@@ -7877,7 +8045,27 @@
    },
    "venue": "Lincoln Financial Field",
    "city": "Philadelphia",
-   "result": null,
+   "result": {
+    "h": 0,
+    "a": 2,
+    "events": [
+     {
+      "min": "7",
+      "type": "goal",
+      "team": "away",
+      "player": "Pépé"
+     },
+     {
+      "min": "64",
+      "type": "goal",
+      "team": "away",
+      "player": "Pépé"
+     }
+    ],
+    "played_on": "2026-06-25",
+    "played_time": "16:00",
+    "notes": "ויקיפדיה מספקת תוצאה וכובשים בלבד; כרטיסים, קרנות, בישולים וחילופים אינם זמינים במקור החינמי."
+   },
    "ai": {
     "models": {
      "Claude": {
@@ -7935,7 +8123,33 @@
    },
    "venue": "MetLife Stadium",
    "city": "East Rutherford",
-   "result": null,
+   "result": {
+    "h": 2,
+    "a": 1,
+    "events": [
+     {
+      "min": "9",
+      "type": "goal",
+      "team": "home",
+      "player": "Angulo"
+     },
+     {
+      "min": "77",
+      "type": "goal",
+      "team": "home",
+      "player": "Plata"
+     },
+     {
+      "min": "2",
+      "type": "goal",
+      "team": "away",
+      "player": "Sané"
+     }
+    ],
+    "played_on": "2026-06-25",
+    "played_time": "16:00",
+    "notes": "ויקיפדיה מספקת תוצאה וכובשים בלבד; כרטיסים, קרנות, בישולים וחילופים אינם זמינים במקור החינמי."
+   },
    "ai": {
     "models": {
      "Claude": {
@@ -7993,7 +8207,27 @@
    },
    "venue": "AT&T Stadium",
    "city": "Arlington",
-   "result": null,
+   "result": {
+    "h": 1,
+    "a": 1,
+    "events": [
+     {
+      "min": "56",
+      "type": "goal",
+      "team": "home",
+      "player": "Maeda"
+     },
+     {
+      "min": "62",
+      "type": "goal",
+      "team": "away",
+      "player": "Elanga"
+     }
+    ],
+    "played_on": "2026-06-25",
+    "played_time": "18:00",
+    "notes": "ויקיפדיה מספקת תוצאה וכובשים בלבד; כרטיסים, קרנות, בישולים וחילופים אינם זמינים במקור החינמי."
+   },
    "ai": {
     "models": {
      "Claude": {
@@ -8051,7 +8285,39 @@
    },
    "venue": "Arrowhead Stadium",
    "city": "Kansas City",
-   "result": null,
+   "result": {
+    "h": 1,
+    "a": 3,
+    "events": [
+     {
+      "min": "54",
+      "type": "goal",
+      "team": "home",
+      "player": "Mastouri"
+     },
+     {
+      "min": "3",
+      "type": "og",
+      "team": "away",
+      "player": "Skhiri"
+     },
+     {
+      "min": "7",
+      "type": "goal",
+      "team": "away",
+      "player": "Brobbey"
+     },
+     {
+      "min": "62",
+      "type": "goal",
+      "team": "away",
+      "player": "Van Hecke"
+     }
+    ],
+    "played_on": "2026-06-25",
+    "played_time": "18:00",
+    "notes": "ויקיפדיה מספקת תוצאה וכובשים בלבד; כרטיסים, קרנות, בישולים וחילופים אינם זמינים במקור החינמי."
+   },
    "ai": {
     "models": {
      "Claude": {
@@ -8109,7 +8375,45 @@
    },
    "venue": "SoFi Stadium",
    "city": "Inglewood",
-   "result": null,
+   "result": {
+    "h": 3,
+    "a": 2,
+    "events": [
+     {
+      "min": "10",
+      "type": "goal",
+      "team": "home",
+      "player": "Güler"
+     },
+     {
+      "min": "31",
+      "type": "goal",
+      "team": "home",
+      "player": "Yılmaz"
+     },
+     {
+      "min": "90+8",
+      "type": "goal",
+      "team": "home",
+      "player": "Ayhan"
+     },
+     {
+      "min": "3",
+      "type": "goal",
+      "team": "away",
+      "player": "Trusty"
+     },
+     {
+      "min": "49",
+      "type": "goal",
+      "team": "away",
+      "player": "Berhalter"
+     }
+    ],
+    "played_on": "2026-06-25",
+    "played_time": "19:00",
+    "notes": "ויקיפדיה מספקת תוצאה וכובשים בלבד; כרטיסים, קרנות, בישולים וחילופים אינם זמינים במקור החינמי."
+   },
    "ai": {
     "models": {
      "Claude": {
@@ -8167,7 +8471,14 @@
    },
    "venue": "Levi's Stadium",
    "city": "Santa Clara",
-   "result": null,
+   "result": {
+    "h": 0,
+    "a": 0,
+    "events": [],
+    "played_on": "2026-06-25",
+    "played_time": "19:00",
+    "notes": "ויקיפדיה מספקת תוצאה וכובשים בלבד; כרטיסים, קרנות, בישולים וחילופים אינם זמינים במקור החינמי."
+   },
    "ai": {
     "models": {
      "Claude": {
