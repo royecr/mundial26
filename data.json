@@ -4,7 +4,7 @@
   "tournament": "מונדיאל 2026",
   "source_schedule": "Wikipedia (2026 FIFA World Cup)",
   "source_analysis": "Google Drive — מונדיאל 2026 (132 מסמכי AI)",
-  "last_results_update": "2026-06-26"
+  "last_results_update": "2026-06-27"
  },
  "teams": {
   "Mexico": {
@@ -8536,7 +8536,45 @@
    },
    "venue": "Gillette Stadium",
    "city": "Foxborough",
-   "result": null,
+   "result": {
+    "h": 1,
+    "a": 4,
+    "events": [
+     {
+      "min": "21",
+      "type": "goal",
+      "team": "home",
+      "player": "Aasgaard"
+     },
+     {
+      "min": "7",
+      "type": "goal",
+      "team": "away",
+      "player": "Dembélé"
+     },
+     {
+      "min": "20",
+      "type": "goal",
+      "team": "away",
+      "player": "Dembélé"
+     },
+     {
+      "min": "32",
+      "type": "goal",
+      "team": "away",
+      "player": "Dembélé"
+     },
+     {
+      "min": "90+4",
+      "type": "goal",
+      "team": "away",
+      "player": "Doué"
+     }
+    ],
+    "played_on": "2026-06-26",
+    "played_time": "15:00",
+    "notes": "מקור: Wikipedia (2026 FIFA World Cup). קהל: 64,146. אצטדיון: Gillette Stadium, Foxborough. שופט: Michael Oliver (אנגליה). כרטיסים/קרנות/בישולים אינם זמינים בדף הסיכום החינמי — הושארו ריקים."
+   },
    "ai": {
     "models": {
      "Claude": {
@@ -8594,7 +8632,45 @@
    },
    "venue": "BMO Field",
    "city": "Toronto",
-   "result": null,
+   "result": {
+    "h": 5,
+    "a": 0,
+    "events": [
+     {
+      "min": "4",
+      "type": "goal",
+      "team": "home",
+      "player": "Diarra"
+     },
+     {
+      "min": "56",
+      "type": "goal",
+      "team": "home",
+      "player": "I. Sarr"
+     },
+     {
+      "min": "59",
+      "type": "goal",
+      "team": "home",
+      "player": "P. Gueye"
+     },
+     {
+      "min": "71",
+      "type": "goal",
+      "team": "home",
+      "player": "P. Gueye"
+     },
+     {
+      "min": "82",
+      "type": "goal",
+      "team": "home",
+      "player": "I. Ndiaye"
+     }
+    ],
+    "played_on": "2026-06-26",
+    "played_time": "15:00",
+    "notes": "מקור: Wikipedia (2026 FIFA World Cup). קהל: 43,036. אצטדיון: BMO Field, Toronto. שופט: Anthony Taylor (אנגליה). כרטיסים/קרנות/בישולים אינם זמינים בדף הסיכום החינמי — הושארו ריקים."
+   },
    "ai": {
     "models": {
      "Claude": {
@@ -8652,7 +8728,27 @@
    },
    "venue": "Lumen Field",
    "city": "Seattle",
-   "result": null,
+   "result": {
+    "h": 1,
+    "a": 1,
+    "events": [
+     {
+      "min": "5",
+      "type": "goal",
+      "team": "home",
+      "player": "Saber"
+     },
+     {
+      "min": "14",
+      "type": "goal",
+      "team": "away",
+      "player": "Rezaeian"
+     }
+    ],
+    "played_on": "2026-06-26",
+    "played_time": "20:00",
+    "notes": "מקור: Wikipedia (2026 FIFA World Cup). קהל: 66,925. אצטדיון: Lumen Field, Seattle. שופט: Szymon Marciniak (פולין). כרטיסים/קרנות/בישולים אינם זמינים בדף הסיכום החינמי — הושארו ריקים."
+   },
    "ai": {
     "models": {
      "Claude": {
@@ -8710,7 +8806,51 @@
    },
    "venue": "BC Place",
    "city": "Vancouver",
-   "result": null,
+   "result": {
+    "h": 1,
+    "a": 5,
+    "events": [
+     {
+      "min": "84",
+      "type": "goal",
+      "team": "home",
+      "player": "Just"
+     },
+     {
+      "min": "28",
+      "type": "goal",
+      "team": "away",
+      "player": "Trossard"
+     },
+     {
+      "min": "50",
+      "type": "goal",
+      "team": "away",
+      "player": "Trossard"
+     },
+     {
+      "min": "66",
+      "type": "goal",
+      "team": "away",
+      "player": "De Bruyne"
+     },
+     {
+      "min": "86",
+      "type": "goal",
+      "team": "away",
+      "player": "Lukaku"
+     },
+     {
+      "min": "90+4",
+      "type": "goal",
+      "team": "away",
+      "player": "Saelemaekers"
+     }
+    ],
+    "played_on": "2026-06-26",
+    "played_time": "20:00",
+    "notes": "מקור: Wikipedia (2026 FIFA World Cup). קהל: 52,497. אצטדיון: BC Place, Vancouver. שופט: Adham Makhadmeh (ירדן). כרטיסים/קרנות/בישולים אינם זמינים בדף הסיכום החינמי — הושארו ריקים."
+   },
    "ai": {
     "models": {
      "Claude": {
@@ -8768,7 +8908,14 @@
    },
    "venue": "NRG Stadium",
    "city": "Houston",
-   "result": null,
+   "result": {
+    "h": 0,
+    "a": 0,
+    "events": [],
+    "played_on": "2026-06-26",
+    "played_time": "19:00",
+    "notes": "מקור: Wikipedia (2026 FIFA World Cup). קהל: 68,278. אצטדיון: NRG Stadium, Houston. שופט: François Letexier (צרפת). כרטיסים/קרנות/בישולים אינם זמינים בדף הסיכום החינמי — הושארו ריקים."
+   },
    "ai": {
     "models": {
      "Claude": {
@@ -8826,7 +8973,21 @@
    },
    "venue": "Estadio Akron",
    "city": "Zapopan",
-   "result": null,
+   "result": {
+    "h": 0,
+    "a": 1,
+    "events": [
+     {
+      "min": "42",
+      "type": "goal",
+      "team": "away",
+      "player": "Baena"
+     }
+    ],
+    "played_on": "2026-06-26",
+    "played_time": "18:00",
+    "notes": "מקור: Wikipedia (2026 FIFA World Cup). קהל: 45,065. אצטדיון: Estadio Akron, Zapopan. שופט: Ismail Elfath (ארה\"ב). כרטיסים/קרנות/בישולים אינם זמינים בדף הסיכום החינמי — הושארו ריקים."
+   },
    "ai": {
     "models": {
      "Claude": {
