@@ -4,7 +4,7 @@
   "tournament": "מונדיאל 2026",
   "source_schedule": "Wikipedia (2026 FIFA World Cup)",
   "source_analysis": "Google Drive — מונדיאל 2026 (132 מסמכי AI)",
-  "last_results_update": "2026-06-29"
+  "last_results_update": "2026-06-30"
  },
  "teams": {
   "Mexico": {
@@ -9602,7 +9602,7 @@
    },
    "venue": "Gillette Stadium",
    "city": "Foxborough",
-   "result": null
+   "result": {"h":1,"a":1,"events":[{"min":"42","type":"goal","team":"away","player":"Enciso"},{"min":"54","type":"goal","team":"home","player":"Havertz"}],"played_on":"2026-06-29","played_time":"16:30","notes":"1–1 לאחר הארכה (a.e.t.). פנדלים: גרמניה 3–4 פרגוואי — פרגוואי העפילה. קהל: 63,945. שופט: Jalal Jayed (מרוקו). מקור: Wikipedia (2026 FIFA World Cup knockout stage). כרטיסים/קרנות/בישולים אינם זמינים בדף הסיכום החינמי — הושארו ריקים."}
   },
   {
    "num": 75,
@@ -9622,7 +9622,7 @@
    },
    "venue": "Estadio BBVA",
    "city": "Guadalupe",
-   "result": null
+   "result": {"h":1,"a":1,"events":[{"min":"72","type":"goal","team":"home","player":"Gakpo"},{"min":"90+1","type":"goal","team":"away","player":"Diop"}],"played_on":"2026-06-29","played_time":"19:00","notes":"1–1 לאחר הארכה (a.e.t.). פנדלים: הולנד 2–3 מרוקו — מרוקו העפילה. קהל: 51,243. שופט: Wilton Sampaio (ברזיל). מקור: Wikipedia (2026 FIFA World Cup knockout stage). כרטיסים/קרנות/בישולים אינם זמינים בדף הסיכום החינמי — הושארו ריקים."}
   },
   {
    "num": 76,
@@ -9642,7 +9642,7 @@
    },
    "venue": "NRG Stadium",
    "city": "Houston",
-   "result": null
+   "result": {"h":2,"a":1,"events":[{"min":"29","type":"goal","team":"away","player":"Sano"},{"min":"56","type":"goal","team":"home","player":"Casemiro"},{"min":"90+5","type":"goal","team":"home","player":"Martinelli"}],"played_on":"2026-06-29","played_time":"12:00","notes":"קהל: 68,777. שופט: Maurizio Mariani (איטליה). מקור: Wikipedia (2026 FIFA World Cup knockout stage). כרטיסים/קרנות/בישולים אינם זמינים בדף הסיכום החינמי — הושארו ריקים."}
   },
   {
    "num": 77,
