@@ -4,7 +4,7 @@
     "tournament": "מונדיאל 2026",
     "source_schedule": "Wikipedia (2026 FIFA World Cup)",
     "source_analysis": "Google Drive — מונדיאל 2026 (132 מסמכי AI)",
-    "last_results_update": "2026-07-04"
+    "last_results_update": "2026-07-05"
   },
   "teams": {
     "Mexico": {
@@ -10310,7 +10310,33 @@
       },
       "venue": "NRG Stadium",
       "city": "Houston",
-      "result": null
+      "result": {
+        "h": 0,
+        "a": 3,
+        "events": [
+          {
+            "min": "50",
+            "type": "goal",
+            "team": "away",
+            "player": "Ounahi"
+          },
+          {
+            "min": "82",
+            "type": "goal",
+            "team": "away",
+            "player": "Ounahi"
+          },
+          {
+            "min": "90+8",
+            "type": "goal",
+            "team": "away",
+            "player": "Rahimi"
+          }
+        ],
+        "played_on": "2026-07-04",
+        "played_time": "12:00",
+        "notes": "מקור: Wikipedia (2026 FIFA World Cup knockout stage). שלב R16: קנדה 0–3 מרוקו. קהל: 68,777. שופט: Michael Oliver (England). כרטיסים/קרנות/בישולים/חילופים אינם זמינים בדף הסיכום החינמי — הושארו ריקים."
+      }
     },
     {
       "num": 90,
@@ -10330,7 +10356,21 @@
       },
       "venue": "Lincoln Financial Field",
       "city": "Philadelphia",
-      "result": null
+      "result": {
+        "h": 0,
+        "a": 1,
+        "events": [
+          {
+            "min": "70",
+            "type": "pen",
+            "team": "away",
+            "player": "Mbappé"
+          }
+        ],
+        "played_on": "2026-07-04",
+        "played_time": "17:00",
+        "notes": "מקור: Wikipedia (2026 FIFA World Cup knockout stage). שלב R16: פרגוואי 0–1 צרפת. שער מפנדל (Mbappé 70'). קהל: 68,324. שופט: Ilgiz Tantashev (Uzbekistan). כרטיסים/קרנות/בישולים/חילופים אינם זמינים בדף הסיכום החינמי — הושארו ריקים."
+      }
     },
     {
       "num": 91,
