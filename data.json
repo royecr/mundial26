@@ -4,7 +4,7 @@
   "tournament": "מונדיאל 2026",
   "source_schedule": "Wikipedia (2026 FIFA World Cup)",
   "source_analysis": "Google Drive — מונדיאל 2026 (132 מסמכי AI)",
-  "last_results_update": "2026-07-06"
+  "last_results_update": "2026-07-07"
  },
  "teams": {
   "Mexico": {
@@ -10494,7 +10494,21 @@
    },
    "venue": "AT&T Stadium",
    "city": "Arlington",
-   "result": null
+   "result": {
+    "h": 0,
+    "a": 1,
+    "events": [
+     {
+      "min": "90+1",
+      "type": "goal",
+      "team": "away",
+      "player": "Merino"
+     }
+    ],
+    "played_on": "2026-07-06",
+    "played_time": "14:00",
+    "notes": "פורטוגל–ספרד, AT&T Stadium ארלינגטון. קהל: 70,649. שופט: Anthony Taylor (אנגליה). רק שערים (כובש+דקה) זמינים מדוח ויקיפדיה; כרטיסים/בישולים/קרנות/חילופים לא פורסמו במקור החינמי."
+   }
   },
   {
    "num": 94,
@@ -10514,7 +10528,45 @@
    },
    "venue": "Lumen Field",
    "city": "Seattle",
-   "result": null
+   "result": {
+    "h": 1,
+    "a": 4,
+    "events": [
+     {
+      "min": "31",
+      "type": "goal",
+      "team": "home",
+      "player": "Tillman"
+     },
+     {
+      "min": "9",
+      "type": "goal",
+      "team": "away",
+      "player": "De Ketelaere"
+     },
+     {
+      "min": "33",
+      "type": "goal",
+      "team": "away",
+      "player": "De Ketelaere"
+     },
+     {
+      "min": "57",
+      "type": "goal",
+      "team": "away",
+      "player": "Vanaken"
+     },
+     {
+      "min": "90+3",
+      "type": "goal",
+      "team": "away",
+      "player": "Lukaku"
+     }
+    ],
+    "played_on": "2026-07-06",
+    "played_time": "17:00",
+    "notes": "ארהב–בלגיה, Lumen Field סיאטל. קהל: 66,925. שופט: Adham Makhadmeh (ירדן). רק שערים (כובש+דקה) זמינים מדוח ויקיפדיה; כרטיסים/בישולים/קרנות/חילופים לא פורסמו במקור החינמי."
+   }
   },
   {
    "num": 95,
