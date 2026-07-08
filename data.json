@@ -4,7 +4,7 @@
   "tournament": "מונדיאל 2026",
   "source_schedule": "Wikipedia (2026 FIFA World Cup)",
   "source_analysis": "Google Drive — מונדיאל 2026 (132 מסמכי AI)",
-  "last_results_update": "2026-07-07"
+  "last_results_update": "2026-07-08"
  },
  "teams": {
   "Mexico": {
@@ -10586,7 +10586,45 @@
    },
    "venue": "Mercedes-Benz Stadium",
    "city": "Atlanta",
-   "result": null
+   "result": {
+    "h": 3,
+    "a": 2,
+    "events": [
+     {
+      "min": "15",
+      "type": "goal",
+      "team": "away",
+      "player": "Ibrahim"
+     },
+     {
+      "min": "67",
+      "type": "goal",
+      "team": "away",
+      "player": "Ziko"
+     },
+     {
+      "min": "79",
+      "type": "goal",
+      "team": "home",
+      "player": "Romero"
+     },
+     {
+      "min": "83",
+      "type": "goal",
+      "team": "home",
+      "player": "Messi"
+     },
+     {
+      "min": "90+2",
+      "type": "goal",
+      "team": "home",
+      "player": "Fernández"
+     }
+    ],
+    "played_on": "2026-07-07",
+    "played_time": "12:00",
+    "notes": "ארגנטינה 3–2 מצרים (זמן חוקי). קהל: 68,239. שופט: François Letexier (צרפת). מקור: Wikipedia (2026 FIFA World Cup knockout stage). כרטיסים/קרנות/בישולים/חילופים אינם זמינים בדף הסיכום החינמי — הושארו ריקים."
+   }
   },
   {
    "num": 96,
@@ -10606,7 +10644,14 @@
    },
    "venue": "BC Place",
    "city": "Vancouver",
-   "result": null
+   "result": {
+    "h": 0,
+    "a": 0,
+    "events": [],
+    "played_on": "2026-07-07",
+    "played_time": "13:00",
+    "notes": "0–0 לאחר הארכה (a.e.t.). פנדלים: שווייץ 4–3 קולומביה — שווייץ העפילה. מבקיעי הפנדלים: שווייץ — Xhaka, Amdouni, Itten, Vargas הבקיעו, Akanji החמיץ; קולומביה — Quintero, Campaz, Díaz הבקיעו, Sánchez ו-Hernández החמיצו. קהל: 52,497. שופט: Iván Barton (אל סלבדור). מקור: Wikipedia (2026 FIFA World Cup knockout stage). כרטיסים/קרנות/בישולים/חילופים אינם זמינים בדף הסיכום החינמי — הושארו ריקים."
+   }
   },
   {
    "num": 97,
