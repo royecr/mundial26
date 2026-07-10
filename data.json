@@ -4,7 +4,7 @@
   "tournament": "מונדיאל 2026",
   "source_schedule": "Wikipedia (2026 FIFA World Cup)",
   "source_analysis": "Google Drive — מונדיאל 2026 (132 מסמכי AI)",
-  "last_results_update": "2026-07-08"
+  "last_results_update": "2026-07-10"
  },
  "teams": {
   "Mexico": {
@@ -10671,7 +10671,27 @@
    },
    "venue": "Gillette Stadium",
    "city": "Foxborough",
-   "result": null
+   "result": {
+    "h": 2,
+    "a": 0,
+    "events": [
+     {
+      "min": "60",
+      "type": "goal",
+      "team": "home",
+      "player": "Mbappé"
+     },
+     {
+      "min": "66",
+      "type": "goal",
+      "team": "home",
+      "player": "Dembélé"
+     }
+    ],
+    "played_on": "2026-07-09",
+    "played_time": "16:00",
+    "notes": "מקור: Wikipedia (2026 FIFA World Cup knockout stage). צרפת 2–0 מרוקו. שופט: Facundo Tello (ארגנטינה). קהל: 63,811. כרטיסים/קרנות/בישולים בדקה מדויקת אינם זמינים בטבלת התוצאה — הושארו ריקים."
+   }
   },
   {
    "num": 98,
