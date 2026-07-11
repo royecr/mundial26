@@ -4,7 +4,7 @@
   "tournament": "מונדיאל 2026",
   "source_schedule": "Wikipedia (2026 FIFA World Cup)",
   "source_analysis": "Google Drive — מונדיאל 2026 (132 מסמכי AI)",
-  "last_results_update": "2026-07-10"
+  "last_results_update": "2026-07-11"
  },
  "teams": {
   "Mexico": {
@@ -10711,7 +10711,33 @@
    },
    "venue": "SoFi Stadium",
    "city": "Inglewood",
-   "result": null
+   "result": {
+    "h": 2,
+    "a": 1,
+    "events": [
+     {
+      "min": "30",
+      "type": "goal",
+      "team": "home",
+      "player": "Ruiz"
+     },
+     {
+      "min": "41",
+      "type": "goal",
+      "team": "away",
+      "player": "De Ketelaere"
+     },
+     {
+      "min": "88",
+      "type": "goal",
+      "team": "home",
+      "player": "Merino"
+     }
+    ],
+    "played_on": "2026-07-10",
+    "played_time": "12:00",
+    "notes": "מקור: Wikipedia (2026 FIFA World Cup knockout stage). ספרד 2–1 בלגיה. שופט: Michael Oliver (אנגליה). קהל: 70,492. כרטיסים/קרנות/בישולים בדקה מדויקת אינם זמינים בטבלת התוצאה — הושארו ריקים."
+   }
   },
   {
    "num": 99,
