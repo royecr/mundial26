@@ -4,7 +4,7 @@
   "tournament": "מונדיאל 2026",
   "source_schedule": "Wikipedia (2026 FIFA World Cup)",
   "source_analysis": "Google Drive — מונדיאל 2026 (132 מסמכי AI)",
-  "last_results_update": "2026-07-12"
+  "last_results_update": "2026-07-15"
  },
  "teams": {
   "Mexico": {
@@ -10855,7 +10855,27 @@
    },
    "venue": "AT&T Stadium",
    "city": "Arlington",
-   "result": null
+   "result": {
+    "h": 0,
+    "a": 2,
+    "events": [
+     {
+      "min": "22",
+      "type": "pen",
+      "team": "away",
+      "player": "Oyarzabal"
+     },
+     {
+      "min": "58",
+      "type": "goal",
+      "team": "away",
+      "player": "Porro"
+     }
+    ],
+    "played_on": "2026-07-14",
+    "played_time": "14:00",
+    "notes": "מקור: Wikipedia (2026 FIFA World Cup knockout stage). צרפת 0–2 ספרד (חצי גמר). אצטדיון AT&T, ארלינגטון. קהל: 70,176. שופט: Iván Barton (אל סלבדור). שער ה-0:1 מפנדל (Oyarzabal, 22'). כרטיסים/קרנות/בישולים בדקה מדויקת אינם זמינים בטבלת התוצאה — הושארו ריקים."
+   }
   },
   {
    "num": 102,
